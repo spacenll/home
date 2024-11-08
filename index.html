@@ -38,23 +38,20 @@
       
     </div>
 
-      <script>
+        <script>
         // إظهار الرسالة وتخزين الرابط
         function showMessage(event, url) {
             event.preventDefault(); // منع الانتقال الفوري للرابط
             document.getElementById("welcomeMessage").classList.add("show");
-            // تخزين الرابط في عنصر HTML للانتقال لاحقاً
+            // تخزين الرابط في عنصر HTML للانتقال لاحقاً (لكننا لن نحتاجه هنا)
             document.getElementById("welcomeMessage").dataset.url = url;
         }
 
-        // إغلاق الرسالة والانتقال إلى الرابط
+        // إغلاق الرسالة بدون الانتقال
         function closeMessage() {
             const overlay = document.getElementById("welcomeMessage");
             overlay.classList.remove("show");
-
-            // الانتقال إلى الرابط المخزن بعد الإغلاق
-          
-            }
+            // لا حاجة للانتقال إلى الرابط هنا
         }
     </script>
 </body>
