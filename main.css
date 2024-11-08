@@ -1,0 +1,122 @@
+/* إعدادات الخلفية المتدرجة مع الحركة */
+body {
+    margin: 0;
+    font-family: monospace;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #6e45e2, #88d3ce, #e8a87c);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #ffffff;
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* زر تغيير اللغة */
+.language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-toggle button {
+    background-color: #6e45e2;
+    border: none;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.topbar{
+        font-size: large;
+    color: darkslategray;
+     display: inline;
+    text-decoration: none;
+        padding: 0 5px;
+}
+.topbar a {
+    color: #darkslategray; /* استبدل #007bff باللون الذي تريده */
+    text-decoration: none; /* لإزالة التسطير عن الرابط إذا أردت */
+}
+
+.topbar a:hover {
+    color: #0056b3; /* لون مختلف عند التمرير على الرابط (اختياري) */
+}
+.language-toggle button:hover {
+    background-color: #88d3ce;
+}
+
+/* إعدادات الحاوية */
+.container {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق الصورة الشخصية */
+.profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 15px;
+}
+
+/* تنسيق النصوص */
+.title {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+.name {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.job-title, .location {
+    font-size: 16px;
+    margin: 3px 0;
+    color: #cccccc;
+}
+
+/* إعدادات أيقونات التواصل الاجتماعي */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: #ffffff;
+    color: #6e45e2;
+    transform: scale(1.1);
+}
+
+/* رسالة تواصل */
+.contact-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
