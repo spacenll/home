@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
+  <div class="overlay" id="welcomeMessage">
+        <div class="message-box">
+            <p>Sorry, we are working on it</p>
+            <button onclick="closeMessage()">OK</button>
+        </div>
+    </div>
     <div class="container">
         <!-- الصورة الشخصية -->
         <div class="profile-pic">
@@ -25,12 +30,23 @@
         <div class="social-icons">
   
             <a href="https://spacenll.github.io/contact/" class="icon"><i class="far fa-address-card"></i> Social Media </a>
+                <a href="https://spacenll.github.io/hobbies/" class="icon"><i class="fas fa-football-ball"></i> Hobbies </a>
+    <a href="https://spacenll.github.io/education/" class="icon"><i class="fas fa-graduation-cap"></i> Education </a>
+    <a href="https://spacenll.github.io/skills/" class="icon"><i class="fas fa-cogs"></i> Skills </a>
+    <a href="https://spacenll.github.io/projects/" class="icon"><i class="fas fa-project-diagram"></i> Projects </a>
         </div>
 
         <!-- رسالة تواصل -->
       
     </div>
 
-
+   <script>
+       
+     
+        // إغلاق الرسالة عند النقر على زر "OK"
+        function closeMessage() {
+            document.getElementById("welcomeMessage").classList.remove("show");
+        }
+    </script>
 </body>
 </html>
