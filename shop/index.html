@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+     <link rel="stylesheet" href="style.css">
+     <meta name="google-site-verification" content="_LZ9Qd-98uTldQ63_4aWnx4IPToBHLzxGYmKwzaS3ek" />
+     <link rel="icon" type="image/png" href="images/loading.png">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+     
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="لأن قهوتك تستحق فناً يليق بها, متوفر الان لكل ولايات سلطنة عُمان">
+    <meta name="author" content="Eng. Ala Aldin M Khalil">
+    <title>spacenll's Cup</title>
+    
+</head>
+<body>
+      <!-- Loading screen -->
+  <div id="loading-screen">
+    <div class="cup-icon"></div>
+</div>
+     
+    <!-- الشعار -->
+    <header >
+        <div class="bannar-section">
+            <div class="logo-section fade-in-section">
+                 <img src="images/logo.png" alt="شعار الموقع">
+      <div class="cart-menu" onclick="showCart()">
+          <i class="astra-icon ast-icon-shopping-basket" >
+    <i class="fa-solid fa-cart-shopping"></i>
+  </i>
+ <a id="total-cart" class="cart-total" style="margin-right: 10px; font-weight: bold; font-size: 13px">0 ريال</a>
+  <!-- أيقونة السلة -->
+  
+            </div>
+          </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        
+    </header>
+
+
+    <!-- القسم الترحيبي -->
+<section class="welcome-section fade-in-section">
+    <h2 class="fade-in1">لكل كوب حكاية ...</h2>
+    <p class="fade-in1">أكواب يدوية بتصاميم فريدة وأناقة مميزة</p>
+</section>
+
+
+    <!-- المنتجات -->
+    <section class="products-section fade-in-section">
+       
+    <p>اختياراتنا الخاصة</p>
+
+        <div class="products-container">
+<button class="scroll-btn left"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</button>
+  <div class="products-wrapper">
+            <div class="product" data-id="101">
+                <img src="images/product1.JPG" alt="صورة كوب اللازورد" class="thumbnail" onclick="openImage(this.src)">
+                   <h4>Lapis cup</h4>
+                 <div class="class-a">أزرق، هادئ - سعة 200مل</div>
+                <div class="product-price" >6.5 ريال  </div>
+                     
+                <button onclick="addToCart(101, 'Lapis cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+             <div class="product" data-id="102">
+                <img src="images/product2.JPG" alt="العقيق الأبيض" class="thumbnail" onclick="openImage(this.src)">
+                 <h4>Onyx cup</h4>
+                      <div class="class-a">أبيض، مخطط - سعة 200مل</div>
+            <div class="product-price" >6.5 ريال  </div>
+                <button onclick="addToCart(102, 'Onyx cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+            <div class="product" data-id="103">
+                <img src="images/product3.JPG" alt="العقيق البرونزي" class="thumbnail" onclick="openImage(this.src)">
+                 <h4>Ambra cup</h4>
+                      <div class="class-a">ذهبي، لامع - سعة 200مل</div>
+            <div class="product-price" >6.5 ريال  </div>
+                <button onclick="addToCart(103, 'Ambra cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+             <div class="product" data-id="104">
+                <img src="images/product4.JPG" alt="الكوارتز الوردي" class="thumbnail" onclick="openImage(this.src)">
+                 <h4>Rosa cup</h4>
+                      <div class="class-a">وردي، سادة - سعة 200مل</div>
+            <div class="product-price" >6.5 ريال  </div>
+                <button onclick="addToCart(104, 'Rosa cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+            <!-- <div class="product" data-id="102"style="opacity: 50%;  border: 4px dotted #91746b;">
+            <img src="images/product6.JPG" alt="صورة كوب كلاسيكي">
+                 <h4>كوب كلاسيكي</h4>
+                             <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+              <div class="product-price" >5 ريال  </div>
+                <button onclick="addToCart(105, 'غير متوفر حاليا')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div> --></div>
+                           <button class="scroll-btn right"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+</button>
+
+
+        </div>
+    </section>
+    
+       <!-- قسم الثاني -->
+  <section class="two-products-section">
+       
+    <p>المنتجات المميزة</p>
+
+        <br>
+        <div class="products-container" style="cursor: grab;">
+            <div class="producttwo" data-id="1042">
+                <img src="images/product5.JPG" alt="صورة كوب اللازورد" class="thumbnail" onclick="openImage(this.src)">
+                   <h4>Topaz Brown cup</h4>
+                 <div class="class-a">بني، منقش - سعة 200مل</div>
+                <div class="product-price">4.5 ريال  </div>
+                     
+                <button onclick="addToCart(105, 'Topaz Brown cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+             <div class="producttwo" data-id="102">
+                <img src="images/product6.JPG" alt="العقيق الأبيض" class="thumbnail" onclick="openImage(this.src)">
+                 <h4>Yashma cup</h4>
+                      <div class="class-a">كريمي، مموه - سعة 200مل</div>
+            <div class="product-price">4.5 ريال  </div>
+                <button onclick="addToCart(106, 'Yashma cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+            
+            
+             
+            
+            <!-- <div class="product" data-id="102"style="opacity: 50%;  border: 4px dotted #91746b;">
+            <img src="images/product6.JPG" alt="صورة كوب كلاسيكي">
+                 <h4>كوب كلاسيكي</h4>
+                             <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+              <div class="product-price" >5 ريال  </div>
+                <button onclick="addToCart(105, 'غير متوفر حاليا')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div> -->
+           
+        </div>
+    </section>
+    <!-- المنتج الأكثر طلبًا -->
+    
+    <section class="top-product-section fade-in-section">
+     <div class="top-product">
+               <h3 class="bestseller-label">الأقل سعراً</h3>
+               <img src="images/product9.JPG" alt="صورة  جوز الهند" class="thumbnail" onclick="openImage(this.src)">
+            <div class="product-details">
+                <h4>Couco Pot</h4>
+                  <p>المصنوع من ثمرة جوز الهند</p>
+                 <p>3.5 ريال  </p>
+                <button onclick="addToCart(107, 'Couco Pot')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الثاني -->
+    
+  <section class="last-product show">
+       
+    <p>المنتجات الخارجة عن المألوف</p>
+
+        <br>
+        <div class="products-container" style="cursor: grab;">
+            <div class="producttwo" data-id="1042">
+                <img src="images/product7.JPG" alt="صورة كوبAzura" class="thumbnail" onclick="openImage(this.src)">
+                   <h4>Azura cup</h4>
+                 <div class="class-a">أزرق، هادئ - سعة 200مل</div>
+                <div class="product-price">5.5 ريال  </div>
+                     
+                <button onclick="addToCart(108, 'Azura cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+             <div class="producttwo" data-id="102">
+                <img src="images/product8.JPG" alt="Creamy Pino" class="thumbnail" onclick="openImage(this.src)">
+                 <h4>Creamy Pino cup</h4>
+                      <div class="class-a">كريمي، مموه - سعة 200مل</div>
+            <div class="product-price">5.5 ريال  </div>
+                <button onclick="addToCart(109, 'Creamy Pino cup')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+            
+            
+            
+             
+            
+            <!-- <div class="product" data-id="102"style="opacity: 50%;  border: 4px dotted #91746b;">
+            <img src="images/product6.JPG" alt="صورة كوب كلاسيكي">
+                 <h4>كوب كلاسيكي</h4>
+                             <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+              <div class="product-price" >5 ريال  </div>
+                <button onclick="addToCart(105, 'غير متوفر حاليا')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div> -->
+           
+        </div>
+    </section>
+    <!-- كيفية الطلب -->
+    <section class="how-to-order-section fade-in-section">
+        <h3>كيفية الطلب</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="icon">1</div>
+                <p>اضف المنتج للسلة</p>
+            </div>
+            <div class="step">
+                <div class="icon">2</div>
+                <p>تأكد من السلة</p>
+            </div>
+            <div class="step">
+                <div class="icon">3</div>
+                <p>املئ بياناتك</p>
+            </div>
+            <div class="step">
+                <div class="icon">4</div>
+                <p>أرسل الطلب</p>
+            </div>
+        </div>
+         <div id="order"></div>
+    </section>
+
+    <!-- السلة -->
+    
+    <section class="cart-section">
+        
+     
+           
+     <div id="cart-backdrop" class="cart-backdrop" onclick="closeCart()"></div>
+        <div id="cart-modal" class="cart-modal hidden">
+        
+            <h2>سلة المشتريات</h2>
+            <div id="cart-items"></div>
+               <div style="border: .5px #bdbdbd dashed;"> </div>
+          <p id="cart-total" class="cart-total">المجموع الكلي: 0 ريال</p>
+                <p id="delivery-cost" class="cart-total">-</p>
+             <div style="border: .5px #bdbdbd solid;"> </div>
+                <p id="product-total" class="cart-total">قيمة المنتجات: 0 ريال</p>
+             <br>
+            <button onclick="scrollToOrderForm()" class="go-to-order-btn">اذهب إلى الطلب</button>
+            <button onclick="closeCart()" class="close-cart-btn">إغلاق</button>
+        </div>
+    </section>
+   
+<br>
+    <!-- نموذج الطلب -->
+    
+    <section class="order-form-section fade-in-section" >
+        <h2>ارسل طلبك</h2>
+        <form id="orderForm">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" placeholder="أدخل اسمك" required>
+             <label for="phone">رقم الهاتف:</label>
+             <input type="text" id="phone" placeholder="ادخل رقم المستلم" required="">
+               <label for="region">المنطقة:</label>
+    <select id="region" onchange="updateDeliveryOptions()" required>
+        <option value="">اختر منطقة التوصيل</option>
+        <option value="السعادة">السعادة</option>
+        <option value="صلالة">صلالة</option>
+        <option value="عوقد">عوقد</option>
+        <option value="صحلنوت">صحلنوت</option>
+        <option value="مسقط">مسقط</option>
+        <option value="اخرى">أخرى</option>
+    </select>
+ <label for="address">العنوان:</label>
+            <input type="text" id="address" placeholder="مثال : الخوض السادسة" required>
+    <label for="delivery">التوصيل:</label>
+    <select id="delivery" required>
+        <option value="">اختر طريقة التوصيل</option>
+    </select>
+        <div class="form-group">
+        <label style="width: 10%; display: none">
+            <input type="checkbox" id="includeDelivery" onclick="updateTotal()" checked> 
+            <a> تضمين قيمة التوصيل مع المجموع</a>
+        </input>
+        </label>
+    </div>
+        
+            <label for="notes">ملاحظات إضافية:</label>
+            <textarea id="notes" placeholder="حاب تضيف اي شي او تخبرنا بشي؟"></textarea>
+            
+            <button type="button" onclick="sendWhatsApp()">أرسل الطلب</button>
+           
+        </form>
+    </section>
+<div class="copyright">
+    <br>
+  
+   <a href="/home/" style="font-size: 12px;color: #bfbdbc;">جميع الحقوق محفوظة 2025<br> تصميم : المهندس علاء الدين خليل spacenll@</a>
+    <a href="https://wa.me/96877267075" style="font-size: 10px;color: #000;">للإبلاغ عن اي عطل</a>
+    <br>
+  
+    </div>
+    <div id="overlay" class="overlay" onclick="closeImage()">
+        <img id="largeImage" src="" alt="صورة مكبرة">
+    </div>
+    <script src="script.js"></script>
+</body>
+     
+</html>
