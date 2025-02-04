@@ -40,7 +40,7 @@ nav {
     padding: 15px 20px;
     background: #1e1e1e;
     position: fixed;
-    width: 100%;
+    width: width: -webkit-fill-available;
     top: 0;
     left: 0;
     z-index: 1000;
