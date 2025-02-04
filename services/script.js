@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("service2-desc").textContent = translations[lang].service2_desc;
         document.getElementById("service3").textContent = translations[lang].service3;
         document.getElementById("service3-desc").textContent = translations[lang].service3_desc;
-        document.getElementById("portfolio-title").textContent = translations[lang].our_work;
-        document.getElementById("contact-title").textContent = translations[lang].contact_us;
+        document.getElementById("nav-portfolio").textContent = translations[lang].our_work;
+        document.getElementById("nav-contact").textContent = translations[lang].contact_us;
         document.getElementById("location").textContent = translations[lang].location;
         document.getElementById("phone").textContent = translations[lang].phone;
         document.getElementById("website").innerHTML = `<a href="http://www.spacenll.site" target="_blank">${translations[lang].website}</a>`;
