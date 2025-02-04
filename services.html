@@ -1,28 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        h1 {
-            color: blue;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+    <meta name="description" content="خدمات التصميم والبرمجة - Eng. Ala Aldin Mohamed Khalil">
+    <meta name="keywords" content="تصميم, برمجة, موشن جرافيك, مواقع إلكترونية, مونتاج, 3D, تصميم شعارات">
+    <meta name="author" content="Eng. Ala Aldin Mohamed Khalil">
+    <title>Eng. Ala Aldin Mohamed Khalil</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page with some styling.</p>
-    <a href="https://www.example.com">Click here to visit Example</a>
+    <!-- شريط التنقل -->
+    <header>
+        <nav>
+            <div class="logo">ALDIN DESIGN</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#portfolio">أعمالنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <button id="langToggle">EN</button>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مرحبًا بك في عالم الإبداع</h1>
+            <p>نقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج</p>
+            <a href="#services" class="btn">استكشف خدماتنا</a>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fa-solid fa-paint-brush"></i>
+                <h3>التصميم الجرافيكي</h3>
+                <p>تصميم الشعارات، الإعلانات، والبطاقات.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-video"></i>
+                <h3>تصميم الفيديو</h3>
+                <p>موشن جرافيك، مونتاج، وإعلانات CGI.</p>
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>البرمجة والمواقع</h3>
+                <p>تطوير المواقع، برامج المحاسبة، والصيانة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأعمال -->
+    <section id="portfolio">
+        <h2>أعمالنا</h2>
+        <div class="portfolio-container">
+            <img src="project1.jpg" alt="مشروع 1">
+            <img src="project2.jpg" alt="مشروع 2">
+            <img src="project3.jpg" alt="مشروع 3">
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <p>📍 عمان - صلالة</p>
+        <p>📞 +968 77267075</p>
+        <p>🌍 <a href="http://www.spacenll.site" target="_blank">www.spacenll.site</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Eng. Ala Aldin Mohamed Khalil - جميع الحقوق محفوظة</p>
+    </footer>
 
 </body>
 </html>
