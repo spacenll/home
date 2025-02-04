@@ -7,6 +7,31 @@ body {
     text-align: center;
 }
 
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 5px;
+border-radius: 25px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: #ffffff;
+    color: #6e45e2;
+    transform: scale(1.1);
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,12 +63,22 @@ nav {
 
 .btn {
     padding: 10px 20px;
-    background: #ff9800;
+    background: #ff6500;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
 }
 
+.btn2 {
+     padding: 5px 5px;
+    background: #868480;
+    font-family: FontAwesome;
+    height: 25px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
 .services-container {
     display: flex;
     justify-content: center;
@@ -63,7 +98,7 @@ nav {
 .service-box i {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #ff9800;
+    color: #ff6500;
 }
 
 .portfolio-container img {
@@ -72,6 +107,11 @@ nav {
     border-radius: 10px;
 }
 
+.hero img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
 footer {
     background: #1e1e1e;
     padding: 10px;

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             portfolio: "أعمالنا",
             contact: "تواصل معنا",
             welcome: "مرحبًا بك في عالم الإبداع",
-            description: "نقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج",
+            description: "اقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج",
             explore: "استكشف خدماتنا",
             service1: "التصميم الجرافيكي",
             service1_desc: "تصميم الشعارات، الإعلانات، والبطاقات.",
@@ -22,7 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
             location: "📍 عمان - صلالة",
             phone: "📞 +968 77267075",
             website: "🌍 موقعنا الإلكتروني",
+            ourserveice: "خدماتنا",
+            ourworks: "اعمالنا",
             footer: "© 2025 Eng. Ala Aldin Mohamed Khalil - جميع الحقوق محفوظة"
+            
         },
         en: {
             home: "Home",
@@ -30,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             portfolio: "Portfolio",
             contact: "Contact",
             welcome: "Welcome to the World of Creativity",
-            description: "We provide the best solutions in design, programming, and video editing.",
+            description: "I provide the best solutions in design, programming, and video editing.",
             explore: "Explore Our Services",
             service1: "Graphic Design",
             service1_desc: "Logo design, advertisements, and business cards.",
@@ -38,11 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
             service2_desc: "Motion graphics, video editing, and CGI ads.",
             service3: "Web & Software",
             service3_desc: "Website development, accounting software, and IT support.",
-            our_work: "Our Work",
+            our_work: "My Work",
             contact_us: "Contact Us",
             location: "📍 Oman - Salalah",
             phone: "📞 +968 77267075",
-            website: "🌍 Our Website",
+            website: "🌍 My Website",
+            ourworks: "My works",
+            ourserveice: "My services",
             footer: "© 2025 Eng. Ala Aldin Mohamed Khalil - All Rights Reserved"
         }
     };
@@ -67,10 +72,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("service3").textContent = translations[lang].service3;
         document.getElementById("service3-desc").textContent = translations[lang].service3_desc;
         document.getElementById("nav-portfolio").textContent = translations[lang].our_work;
-        document.getElementById("nav-contact").textContent = translations[lang].contact_us;
+        document.getElementById("contact-title").textContent = translations[lang].contact_us;
         document.getElementById("location").textContent = translations[lang].location;
+        document.getElementById("sservices").textContent = translations[lang].ourserveice;
+        document.getElementById("wworks").textContent = translations[lang]. our_work;
         document.getElementById("phone").textContent = translations[lang].phone;
-        document.getElementById("website").innerHTML = `<a href="http://www.spacenll.site" target="_blank">${translations[lang].website}</a>`;
+        
         document.getElementById("footer").textContent = translations[lang].footer;
 
         // تخزين اللغة المحددة في localStorage
