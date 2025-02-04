@@ -32,26 +32,86 @@ border-radius: 25px;
 }
 
 
+/* تحسين الشريط العلوي ليكون متجاوبًا */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    padding: 15px 20px;
     background: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    display: inline-block;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
+
+/* زر تغيير اللغة */
+#langToggle {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* قائمة الهاتف */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* جعل القائمة منسدلة على الجوال */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1e1e1e;
+        width: 100%;
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
 
 .hero {
     display: flex;
