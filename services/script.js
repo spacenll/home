@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
         ar: {
             home: "الرئيسية",
             services: "الخدمات",
-            portfolio: "أعمالنا",
-            contact: "تواصل معنا",
+            portfolio: "اعمالي",
+            shop: "متجري",
+            contact: "تواصل معي",
             welcome: "مرحبًا بك في عالم الإبداع",
             description: "اقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج",
             explore: "استكشف خدماتنا",
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             services: "Services",
             portfolio: "Portfolio",
             contact: "Contact",
+             shop: "Shop",
             welcome: "Welcome to the World of Creativity",
             description: "I provide the best solutions in design, programming, and video editing.",
             explore: "Explore Our Services",
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // تحديث جميع العناصر التي تحتاج ترجمة
         document.getElementById("nav-home").textContent = translations[lang].home;
         document.getElementById("nav-services").textContent = translations[lang].services;
+          document.getElementById("shop").textContent = translations[lang].shop;
         document.getElementById("nav-portfolio").textContent = translations[lang].portfolio;
         document.getElementById("nav-contact").textContent = translations[lang].contact;
         document.getElementById("hero-title").textContent = translations[lang].welcome;
