@@ -68,7 +68,7 @@ Read our FAQ
 }
 
 .cart-section .cart-modal #cart-items p  {
-    color:#000;
+    color:#824c30;
     font-size: 14px
 }
 
@@ -174,7 +174,7 @@ Read our FAQ
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #191919;
+      background-color: #824c30;
       z-index: 9999;
             transition: opacity 1.2s ease;
     }
@@ -272,11 +272,11 @@ position: relative;
     text-align: center; /* لمحاذاة النص */
     color: #fff; /* لون النص ليظهر بوضوح فوق الصورة */
     padding: 30px 30px; /* مسافة داخلية للنص */
-    background-image: url('images/bannar.webp'); /* إضافة الصورة كخلفية */
+    background-image: url('images/bannar.jpg'); /* إضافة الصورة كخلفية */
 background-size: cover; /* لجعل الصورة تغطي الخلفية بالكامل */
     background-position: center; /* لتوسيط الصورة */
     background-repeat: no-repeat; /* لمنع تكرار الصورة */
-    height: 50vh; /* لضبط ارتفاع القسم */
+    height: 65vh; /* لضبط ارتفاع القسم */
     display: flex; /* لتفعيل التحكم بمحاذاة النص */
     flex-direction: column; /* ترتيب العناصر عموديًا */
     justify-content: flex-start; /* جعل النص في أعلى القسم */
@@ -304,14 +304,16 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 
 
 .welcome-section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: -10px;
+
 }
 
 .welcome-section p {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
     font-weight: normal;
+  
 }
 
 
@@ -509,7 +511,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .product button {
     position: relative;
     z-index: 8;
-    background-color: #000;
+    background-color: #824c30;
     color: #ffffff;
     font-family: 'Tajawal', sans-serif;
     border: none;
@@ -543,7 +545,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .producttwo button {
     position: relative;
         z-index: 8;
-    background-color: #000;
+    background-color: #824c30;
     color: #ffffff;
     font-weight: bold;
     font-family: 'Tajawal', sans-serif;
@@ -584,7 +586,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 
 .product-details button {
-    background-color: #000;
+    background-color: #824c30;
     font-family: 'Tajawal', sans-serif;
     color: #ffffff;
     border: none;
@@ -655,7 +657,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 
 .step .icon {
-    background-color: #000;
+    background-color: #824c30;
     color: #ffffff;
     width: 40px;
     height: 40px;
@@ -694,7 +696,7 @@ body p {
 
 }
 form button {
-    background-color: #000;
+    background-color: #824c30;
     color: white;
     font-weight: bold;
     cursor: pointer;
