@@ -1,3 +1,8 @@
+.copyright{
+    background: #824c30;
+    padding: 50px;
+}
+
 .social-icons {
         display: flex;
     flex-wrap: wrap;
