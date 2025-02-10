@@ -138,18 +138,26 @@ closeCart();
 // الحصول على سعر المنتج
 function getProductPrice(productId) {
     const prices = {
-        101: { name: "Lapis cup", price: 6.5 },
-        102: { name: "Onyx cup", price: 6.5 },
-        103: { name: "Ambra cup", price: 6.5 },
-        104: { name: "Rosa cup", price: 6.5 },
-        
-        105: { name: "Topaz Brown cup", price: 4.5 },
-        106: { name: "Yashma cup", price: 4.5 },
-        
-        107: { name: "Couco Pot", price: 3.5 },
-        
-        108: { name: "Azura cup", price: 5.5 },
-        109: { name: "Creamy Pino cup", price: 5.5 }
+          121: { name: "Karak #4", price: 4 },
+    120: { name: "Latte #4", price: 4 },
+    119: { name: "Creamy #4", price: 4 },
+    118: { name: "Azura #4", price: 4 },
+    117: { name: "Bronze #1", price: 4 },
+    116: { name: "White #1", price: 4 },
+    115: { name: "Celestial #1", price: 4 },
+    114: { name: "Black #1", price: 4 },
+    113: { name: "Red #1", price: 4 },
+    112: { name: "Rosa #1", price: 4 },
+    109: { name: "Couco #3", price: 4 },
+    108: { name: "White #2", price: 4 },
+    107: { name: "Green #2", price: 4 },
+    106: { name: "Yashma #2", price: 4 },
+    105: { name: "Brown #2", price: 4 },
+    104: { name: "Blue #1", price: 4 },
+    103: { name: "Spiral #1", price: 4 },
+    102: { name: "Turquoise #1", price: 4 },
+    101: { name: "Yellow #1", price: 4 }
+
     };
     return prices[productId] || { name: "غير معروف", price: 0 };
 }
