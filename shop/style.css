@@ -12,6 +12,8 @@
     padding: 10px;
     margin: 5px;
     border-radius: 50%;
+        height: 25px;
+    width: 25px;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
 }
