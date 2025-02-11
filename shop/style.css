@@ -177,7 +177,7 @@ Read our FAQ
     #loading-screen .cup-icon {
       width: 100px;
       height:100px;
-      background: url('images/loading.png') no-repeat center;
+      background: url('images/logo.png') no-repeat center;
       background-size: contain;
     
     }
