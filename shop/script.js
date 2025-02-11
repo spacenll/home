@@ -319,7 +319,7 @@ function sendWhatsApp() {
         confirmButtonText: 'تم'
     }).then((result) => {
         if (result.isConfirmed) {
-            const phonew = '+96877267075';
+            const phonew = '+96879289653';
             const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank'); // فتح الرابط في نافذة جديدة
         }
