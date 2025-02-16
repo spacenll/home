@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" >
 <head>
       <meta name="p:domain_verify" content="786d0c1d2143ca3bcb79cbb16fa1ff1d"/>
     <meta name="google-site-verification" content="_LZ9Qd-98uTldQ63_4aWnx4IPToBHLzxGYmKwzaS3ek" />
@@ -15,6 +15,8 @@
     <title>Eng. Ala Aldin Khalil - المهندس علاء الدين خليل</title>
     <link rel="stylesheet" href="services/styles.css">
     <script src="services/script.js" defer></script>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
        <link rel="icon" type="image/png" href="https://spacenll.site/assets/img/علاء-خليل.png">
      <!--- <link rel="canonical" href="https://spacenll.github.io/home/">--->
@@ -82,10 +84,10 @@
          
         <ul class="nav-links" id="navLinks">
             <li><a id="nav-home" href="/">الرئيسية</a></li>
-            <li><a id="nav-services" href="/services">الخدمات</a></li>
+            <li><a id="nav-services" href="#services">الخدمات</a></li>
                     <li><a id="shop" href="/shop">متجري</a></li>
             <li><a id="nav-portfolio" href="#portfolio">اعمالي</a></li>
-            <li><a id="nav-contact" href="/contact">تواصل معي</a></li>
+            <li><a id="nav-contact" href="#contact">تواصل معي</a></li>
         </ul>
         <button id="langToggle" class="btn2">EN</button>
     </nav>
@@ -94,7 +96,7 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <img src="services/hero-bg.jpg">
-        <h1 id="hero-title">مرحبًا بك في عالم الإبداع</h1>
+        <h1 id="hero-title" >مرحبًا بك في عالم الإبداع</h1>
         <p id="hero-desc">اقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج</p>
         <a id="explore-btn" href="#services" class="btn">استكشف خدماتي</a>
     </div>
@@ -122,18 +124,18 @@
 </section>
   <section id="portfolio">
         <h2 id="wworks">بعض اعمالي</h2>
-        <div class="portfolio-container">
-            <img src="services/1.png" alt="Logo">
-            <img src="services/2.png" alt="3D Design">
-            <img src="services/3.png" alt="CGI Video">
-            <img src="services/4.png" alt="Logo">
-            <img src="services/5.png" alt="3D Design">
-            <img src="services/6.png" alt="CGI Video">
-            <img src="services/7.png" alt="Logo">
-            <img src="services/8.png" alt="3D Design">
-            <img src="services/9.png" alt="CGI Video">
-            <img src="services/10.png" alt="CGI Video">
-        </div>
+                <br>
+        <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">الكل</button>
+        <button class="filter-btn" data-category="websites">المواقع</button>
+        <button class="filter-btn" data-category="publications">الأعمال والمنشورات</button>
+        <button class="filter-btn" data-category="ads">إعلانات ترويجية</button>
+        <button class="filter-btn" data-category="3d-designs">تصاميم ثلاثية الأبعاد</button>
+        <button class="filter-btn" data-category="logo-animation">تحريك اللوغو</button>
+    </div>
+
+    <!-- معرض الصور والفيديوهات -->
+    <div id="gallery" class="gallery-container"></div>
     </section>
     
 <section id="contact">
@@ -175,5 +177,7 @@
 
     <p id="footer">© 2025 Eng. Ala Aldin Mohamed Khalil - جميع الحقوق محفوظة</p>
 </footer>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+       <script src="assets/wow/wow.min.js"></script>
 </body>
 </html>
