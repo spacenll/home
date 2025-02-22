@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $(document).ready(function () {
     // تحميل جميع الصور والفيديوهات عند تحميل الصفحة
-    loadGallery("all");
+    loadGallery("websites");
 
     // عند النقر على زر تصفية
     $(".filter-btn").click(function () {
@@ -160,7 +160,7 @@ $(document).ready(function () {
             ]
         };
 
-        // إضافة جميع العناصر إلى "الكل"
+    
        
 
         // تحميل العناصر وعرضها في الصفحة
