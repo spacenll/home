@@ -157,14 +157,11 @@ $(document).ready(function () {
             "logo-animation": [
                 { type: "video", src: "assets/1/logo motion.mp4" }
             
-            ],
-            "all": [] // سيتم تعبئته بجميع العناصر
+            ]
         };
 
         // إضافة جميع العناصر إلى "الكل"
-        if (category === "all") {
-            Object.values(assets).forEach(arr => assets.all.push(...arr));
-        }
+       
 
         // تحميل العناصر وعرضها في الصفحة
         assets[folder].forEach(item => {
