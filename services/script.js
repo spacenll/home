@@ -123,7 +123,7 @@ $(document).ready(function () {
     function loadGallery(category) {
         $("#gallery").html(""); // تفريغ المحتوى السابق
 
-        let folder = category === "all" ? "all" : category; // تحديد المجلد
+        let folder = category === "websites" ? "websites" : category; // تحديد المجلد
         let assets = {
             "websites": [
                
