@@ -162,6 +162,9 @@ $(document).ready(function () {
                  { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
                         { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
             ],
+                    "adsboard": [
+                        { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
+            ],
             "logo-animation": [
                 { type: "video", src: "assets/1/logo motion.mp4" }
             
