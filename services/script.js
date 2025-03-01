@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $(document).ready(function () {
     // تحميل جميع الصور والفيديوهات عند تحميل الصفحة
-    loadGallery("websites");
+    loadGallery("ramadan");
 
     // عند النقر على زر تصفية
     $(".filter-btn").click(function () {
@@ -123,7 +123,7 @@ $(document).ready(function () {
     function loadGallery(category) {
         $("#gallery").html(""); // تفريغ المحتوى السابق
 
-        let folder = category === "websites" ? "websites" : category; // تحديد المجلد
+        let folder = category === "ramadan" ? "ramadan" : category; // تحديد المجلد
         let assets = {
             "websites": [
                
@@ -152,7 +152,15 @@ $(document).ready(function () {
                 { type: "image", src: "assets/5/3d works 2.jpg" },
                  { type: "image", src: "assets/5/3d works 1.png" },
                 { type: "image", src: "assets/5/3d works.png" },
-                 { type: "image", src: "assets/5/3d works.jpg" },
+                 { type: "image", src: "assets/5/3d works.jpg" }
+            ],
+                 "ramadan": [
+                { type: "image", src: "assets/6/تصماميم رمضانية (3).png" },
+                { type: "image", src: "assets/6/تصماميم رمضانية (1).png" },
+                 { type: "image", src: "assets/6/تصماميم رمضانية (2).png" },
+                { type: "image", src: "assets/6/تصماميم رمضانية (5).png" },
+                 { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
+                        { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
             ],
             "logo-animation": [
                 { type: "video", src: "assets/1/logo motion.mp4" }
