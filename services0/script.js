@@ -173,6 +173,10 @@ $(document).ready(function () {
                     "adsboard": [
                         { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
             ],
+                     "productbackground": [
+                        { type: "image", src: "assets/8/تصميم خلفية للمنتجات (1).jpg" },
+                          { type: "image", src: "assets/8/تصميم خلفية للمنتجات (2).jpg" }
+            ],
             "logo-animation": [
                 { type: "video", src: "assets/1/logo motion.mp4" }
             
