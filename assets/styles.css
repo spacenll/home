@@ -1,0 +1,264 @@
+body {
+    font-family: Alexandria;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+     direction:rtl;
+}
+p{
+    padding-bottom: 20px;
+}
+.filter-buttons {
+    margin: 20px 0;
+}
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #f16724;
+    color: #121518;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    border-radius: 50px;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #f16724;
+    background: #121518;
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+.btn {
+    transition: .3s;
+}
+.filter-btn {
+   font-family: Alexandria;
+    background: #121212;
+    border: 1px solid orange;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+}
+
+.filter-btn.active {
+    background: orange;
+}
+
+/* المعرض */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid orange;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+section{
+    padding: 100px 0 100px 0;
+}
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 5px;
+border-radius: 25px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons .icon:hover {
+    background-color: #ffffff;
+    color: #6e45e2;
+    transform: scale(1.1);
+}
+
+
+/* تحسين الشريط العلوي ليكون متجاوبًا */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #1e1e1e;
+    position: fixed;
+        width: -webkit-fill-available;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* زر تغيير اللغة */
+#langToggle {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* قائمة الهاتف */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* جعل القائمة منسدلة على الجوال */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1e1e1e;
+        width: 100%;
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: url('collage.webp') no-repeat center center/cover;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #ff6500;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn2 {
+     padding: 5px 5px;
+    background: #868480;
+    font-family: FontAwesome;
+    height: 25px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.service-box {
+    background: #1e1e1e;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff6500;
+}
+
+.portfolio-container img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.hero img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+footer {
+    background: #1e1e1e;
+    padding: 10px;
+}
