@@ -1,3 +1,18 @@
+document.querySelectorAll('a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const sectionId = this.getAttribute('href').replace('/', ''); 
+        history.pushState(null, null, `/${sectionId}`);
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+window.addEventListener('popstate', function() {
+    const path = location.pathname.replace('/', '');
+    if (path) {
+        document.getElementById(path)?.scrollIntoView({ behavior: 'smooth' });
+    }
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
