@@ -239,24 +239,32 @@ function removeFromCart(index) {
 }
 
 // تحديث خيارات التوصيل بناءً على المنطقة
-function updateDeliveryOptions() {
+function updateDeliveryOptions() { 
     const region = document.getElementById("region").value;
     const delivery = document.getElementById("delivery");
     delivery.innerHTML = "";
 
     if (region === "السعادة") {
-        delivery.innerHTML = `<option value="1">مندوب - 1 ريال</option>`;
-    } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
         delivery.innerHTML = `<option value="1.5">مندوب - 1.5 ريال</option>`;
+    } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
+        delivery.innerHTML = `<option value="2">مندوب - 2 ريال</option>`;
     } else if (region === "مسقط" || region === "اخرى") {
         delivery.innerHTML = `
             <option value="1">نقليات - 1 ريال</option>
             <option value="2">مندوب إلى الباب - 2 ريال</option>
         `;
+    } else if (region === "صور" || region === "جعلان ابو علي") {
+        delivery.innerHTML = `<option value="2.5">نقليات - 2.5 ريال</option>`;
+    } else if (region === "مناطق اخرى") {
+        delivery.innerHTML = `<option value=""> عذراً ,سيتم تأكيد تكلفة التوصيل واخبارك 🙏</option>`;
+    } else if (region === "بركاء | المعبيلة") {
+        delivery.innerHTML = `<option value="1.5">نقليات - 1.5 ريال</option>`;
     } else {
         delivery.innerHTML = `<option value="">اختر طريقة التوصيل</option>`;
     }
 }
+
+
 
 // حساب تكلفة التوصيل
 function getDeliveryCost() {
