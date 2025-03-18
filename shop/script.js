@@ -329,7 +329,9 @@ function sendWhatsApp() {
         if (result.isConfirmed) {
             const phonew = '+96879289653';
             const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
+            const doneurl= '#ok';
             window.open(whatsappUrl, '_blank'); // فتح الرابط في نافذة جديدة
+              window.open(doneurl);
         }
     });
 }
