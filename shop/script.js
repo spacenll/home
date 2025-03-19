@@ -331,7 +331,7 @@ function sendWhatsApp() {
             const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
             const doneurl= '#ok';
             window.open(whatsappUrl, '_blank'); // فتح الرابط في نافذة جديدة
-              window.open(doneurl);
+               window.location.href = doneurl; 
         }
     });
 }
