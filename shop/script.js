@@ -332,7 +332,7 @@ function sendWhatsApp() {
         text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك المندوب قريبًا!`,
         icon: 'success',
         confirmButtonText: 'متابعة'
-    }).then(() => {
+    }).then((result) => {
         const whatsappLink = `https://wa.me/96879289653?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
     });
