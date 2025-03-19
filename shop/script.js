@@ -320,13 +320,21 @@ function sendWhatsApp() {
         `المجموع الكلي: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || '-'}`;
 
-    // تتبع الحدث في Google Tag Manager
-    gtag('event', 'conversion', {
-        'send_to': 'AW-975991783',
-        'event_category': 'Button Click',
-        'event_label': 'WhatsApp Order Button'
-    });
 
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-975991783/n111COXsuawaEOfnsdED',
+      'value': 1.0,
+      'currency': 'AED',
+      'event_callback': callback
+  });
+  return false;
+}
     Swal.fire({
         title: 'شكراً لك',
         text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك المندوب قريبًا!`,
