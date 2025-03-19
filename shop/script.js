@@ -333,19 +333,10 @@ function sendWhatsApp() {
             window.open(whatsappUrl, '_blank'); // فتح الرابط في نافذة جديدة
             
             // Google tag (gtag.js)
-(function() {
-    var script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-975991783";
-    document.head.appendChild(script);
-
-    script.onload = function() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-975991783');
-    };
-        }
-    });
+    gtag('event', 'conversion', {
+                        'send_to': 'AW-975991783',
+                        'event_category': 'Button Click',
+                        'event_label': 'WhatsApp Order Button'
+                    });
 }
 
