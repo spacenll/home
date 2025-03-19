@@ -320,23 +320,20 @@ function sendWhatsApp() {
         `المجموع الكلي: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || '-'}`;
 
+    // تتبع الحدث في Google Tag Manager
+    gtag('event', 'conversion', {
+        'send_to': 'AW-975991783',
+        'event_category': 'Button Click',
+        'event_label': 'WhatsApp Order Button'
+    });
+
     Swal.fire({
         title: 'شكراً لك',
-        text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله`,
-        icon: 'info',
-        confirmButtonText: 'تم'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const phonew = '+96879289653';
-            const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
-            const doneurl= '#ok';
-            window.open(whatsappUrl, '_blank'); // فتح الرابط في نافذة جديدة
-            
-            // Google tag (gtag.js)
-    gtag('event', 'conversion', {
-                        'send_to': 'AW-975991783',
-                        'event_category': 'Button Click',
-                        'event_label': 'WhatsApp Order Button'
-                    });
+        text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك المندوب قريبًا!`,
+        icon: 'success',
+        confirmButtonText: 'متابعة'
+    }).then(() => {
+        const whatsappLink = `https://wa.me/96879289653?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank');
+    });
 }
-
