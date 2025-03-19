@@ -334,7 +334,7 @@ function sendWhatsApp() {
         confirmButtonText: 'متابعة'
     }).then((result) => {
          if (result.isConfirmed){
-        const whatsappLink = `https://wa.me/96879289653?text=${encodeURIComponent(message)}`;
+        const whatsappLink = `https://wa.me/+96879289653?text=${encodeURIComponent(message)}`;
         window.open(whatsappLink, '_blank');
         }     
     });
