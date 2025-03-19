@@ -345,7 +345,9 @@ function gtag_report_conversion(url) {
                 const doneurl= '#ok';
                  window.location.href = doneurl;
         const whatsappLink = `https://wa.me/+96879289653?text=${encodeURIComponent(message)}`;
+              const whatsappLink2 = 'thankyou'
         window.open(whatsappLink, '_blank');
+           window.open(whatsappLink2);  
              
         }     
     });
