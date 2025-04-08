@@ -175,8 +175,8 @@ function showCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     const productTotal = document.getElementById('product-total');
-   const delivery = document.getElementById('delivery-cost');
-    
+    const delivery = document.getElementById('delivery-cost');
+
     cartItems.innerHTML = '';
 
     if (cart.length === 0) {
@@ -187,8 +187,7 @@ function showCart() {
             itemDiv.className = 'cart-item';
             itemDiv.innerHTML = `
                 <p>
-         ‎ ${item.price} ‎ = ${item.name} ‎ ×  ‎  ${item.quantity}  ر.ع   ‎
-
+                    ‎ ${item.price} ‎ = ${item.name} ‎ ×  ‎  ${item.quantity}  ر.ع   ‎
                     <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="decreaseQuantity(${index})">-</button>
                     <button onclick="removeFromCart(${index})">حذف</button>
@@ -199,14 +198,28 @@ function showCart() {
     }
 
     const deliveryCost = getDeliveryCost();
-    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0); // إجمالي المنتجات
+    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    let discount = totalItems >= 2 ? 2 : 0;
 
-    productTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
+    const finalTotal = productsTotal + deliveryCost - discount;
+
+    // عرض الخصم دائمًا
+    const discountInfo = document.createElement('p');
+    discountInfo.style.color = discount > 0 ? 'green' : 'black';
+    discountInfo.textContent = ` الخصم: -${discount} ريال`;
+    cartItems.appendChild(discountInfo);
+
+    // عرض التفاصيل الأخرى
+    productTotal.textContent = `المجموع الكلي: ${finalTotal} ريال`;
     delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
     cartTotal.textContent = `${productsTotal} ريال`;
+
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');
 }
+
 
 // إغلاق السلة
 function closeCart() {
