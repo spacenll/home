@@ -203,12 +203,12 @@ function showCart() {
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     let discount = totalItems >= 2 ? 2 : 0;
 
-    const finalTotal = productsTotal + deliveryCost - discount;
+    const finalTotal = productsTotal + deliveryCost ;
 
     // عرض الخصم دائمًا
     const discountInfo = document.createElement('p');
     discountInfo.style.color = discount > 0 ? 'green' : 'black';
-    discountInfo.textContent = ` الخصم: -${discount} ريال`;
+    discountInfo.textContent = ` لايوجد خصومات: `;
     cartItems.appendChild(discountInfo);
 
     // عرض التفاصيل الأخرى
