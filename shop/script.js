@@ -197,13 +197,14 @@ function showCart() {
         });
     }
 
-   const deliveryCost = getDeliveryCost();
-const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+const deliveryCost = getDeliveryCost();
+
+// حساب عدد الأكواب (جميع المنتجات)
 const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
+// حساب سعر الأكواب بعد الخصم حسب القاعدة
 let cupsCost = 0;
 
-// حساب تكلفة الأكواب حسب القاعدة
 if (totalItems === 2) {
     cupsCost = 6;
 } else if (totalItems === 3) {
@@ -212,13 +213,16 @@ if (totalItems === 2) {
     cupsCost = 9 + (totalItems - 3) * 3.5;
 }
 
-// حساب المجموع النهائي
-const finalTotal = productsTotal + deliveryCost + cupsCost;
+// استبدال السعر الكلي للأكواب بدلًا من حسابهم كلهم بسعر 3.5
+const productsTotal = cupsCost;
 
-// عرض رسالة الخصم (أو سعر الأكواب)
+// حساب المجموع النهائي
+const finalTotal = productsTotal + deliveryCost;
+
+// عرض معلومات السعر الخاص
 const discountInfo = document.createElement('p');
-discountInfo.style.color = 'black';
-discountInfo.textContent = `سعر خاص للأكواب: ${cupsCost.toFixed(2)} ريال`;
+discountInfo.style.color = 'green';
+discountInfo.textContent = `تم تطبيق سعر خاص: ${cupsCost.toFixed(2)} ريال`;
 cartItems.appendChild(discountInfo);
 
 // عرض التفاصيل الأخرى
