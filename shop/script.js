@@ -197,27 +197,38 @@ function showCart() {
         });
     }
 
-    const deliveryCost = getDeliveryCost();
-    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-    let discount = totalItems >= 2 ? 2 : 0;
+   const deliveryCost = getDeliveryCost();
+const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
-    const finalTotal = productsTotal + deliveryCost ;
+let cupsCost = 0;
 
-    // عرض الخصم دائمًا
-    const discountInfo = document.createElement('p');
-    discountInfo.style.color = discount > 0 ? 'green' : 'black';
-    discountInfo.textContent = ` لايوجد خصومات: `;
-    cartItems.appendChild(discountInfo);
+// حساب تكلفة الأكواب حسب القاعدة
+if (totalItems === 2) {
+    cupsCost = 6;
+} else if (totalItems === 3) {
+    cupsCost = 9;
+} else if (totalItems > 3) {
+    cupsCost = 9 + (totalItems - 3) * 3.5;
+}
 
-    // عرض التفاصيل الأخرى
-    productTotal.textContent = `المجموع الكلي: ${finalTotal} ريال`;
-    delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
-    cartTotal.textContent = `${productsTotal} ريال`;
+// حساب المجموع النهائي
+const finalTotal = productsTotal + deliveryCost + cupsCost;
 
-    cartModal.classList.add('visible');
-    cartBackdrop.classList.add('visible');
+// عرض رسالة الخصم (أو سعر الأكواب)
+const discountInfo = document.createElement('p');
+discountInfo.style.color = 'black';
+discountInfo.textContent = `سعر خاص للأكواب: ${cupsCost.toFixed(2)} ريال`;
+cartItems.appendChild(discountInfo);
+
+// عرض التفاصيل الأخرى
+productTotal.textContent = `المجموع الكلي: ${finalTotal.toFixed(2)} ريال`;
+delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
+cartTotal.textContent = `${productsTotal.toFixed(2)} ريال`;
+
+cartModal.classList.add('visible');
+cartBackdrop.classList.add('visible');
+
 }
 
 
