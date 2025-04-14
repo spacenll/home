@@ -164,7 +164,7 @@ function getProductPrice(productId) {
 
 // حساب الإجمالي
 function calculateTotal(includeDelivery = false, deliveryCost = 0) {
-    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const productsTotal = finalTotal;
     return includeDelivery ? productsTotal + deliveryCost : productsTotal;
 }
 
