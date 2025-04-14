@@ -449,6 +449,34 @@
         <img id="largeImage" src="" alt="صورة مكبرة">
     </div>
     <script src="script.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  Swal.fire({
+    title: '🎉 عرض خاص 🎉',
+    html: `
+      <p style="font-size: 1.2em; margin: 10px 0;">
+        اشترِ <strong>كوبين فقط بـ 6 ريال</strong>!
+      </p>
+      <p style="font-size: 1.2em; margin: 10px 0;">
+        أو احصل على <strong>3 أكواب بـ 9 ريال</strong> 🥤
+      </p>
+      <p style="font-size: 1.2em; margin: 10px 0; color: green;">
+        و 🎁 ستحصل على إناء جوز هند مجاني!
+      </p>
+    `,
+    icon: 'info',
+    confirmButtonText: 'تسوق الآن',
+    confirmButtonColor: '#3085d6',
+    backdrop: true,
+    showClass: {
+      popup: 'swal2-show animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'swal2-hide animate__animated animate__fadeOutUp'
+    }
+  });
+});
+</script>
 </body>
      
 </html>
