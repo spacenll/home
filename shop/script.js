@@ -164,10 +164,24 @@ function getProductPrice(productId) {
 
 // حساب الإجمالي
 function calculateTotal(includeDelivery = false, deliveryCost = 0) {
-    const productsTotal = finalTotal;
-    return includeDelivery ? productsTotal + deliveryCost : productsTotal;
-}
+    // حساب عدد الأكواب (كل المنتجات هي أكواب)
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
+    // تطبيق الخصم حسب عدد الأكواب
+    let cupsCost = 0;
+    if (totalItems === 2) {
+        cupsCost = 6;
+    } else if (totalItems === 3) {
+        cupsCost = 9;
+    } else if (totalItems > 3) {
+        cupsCost = 9 + (totalItems - 3) * 3.5;
+    } else {
+        cupsCost = totalItems * 3.5; // السعر العادي
+    }
+
+    const total = includeDelivery ? cupsCost + deliveryCost : cupsCost;
+    return total;
+}
 // عرض السلة
 function showCart() {
     const cartModal = document.getElementById('cart-modal');
