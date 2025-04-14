@@ -121,7 +121,7 @@ function addToCart(productId, productName) {
 function updateCartTotal() {
     const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const cartTotalElement = document.getElementById('total-cart');
-    
+     const cartTotalElement2 = document.getElementById('cart-total');
     if (cartTotalElement) {
         cartTotalElement.textContent = `${total} ريال`;
     }
