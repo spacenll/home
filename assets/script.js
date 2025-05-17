@@ -135,11 +135,11 @@ $(document).ready(function () {
         let assets = {
             "websites": [
                
-                { type: "image", src: "assets/2/webpage_design (1).jpg" },
-                  { type: "image", src: "assets/2/webpage_design (2).jpg" },
-                  { type: "image", src: "assets/2/webpage_design (3).jpg" },
-                { type: "image", src: "assets/2/webpage_design (4).jpg" },
-                    { type: "image", src: "assets/2/webpage_design (5).jpg" }
+                { type: "image", src: "assets/2/webpage_design (1).jpg", link: "https://marktech-agency.com/" },
+                  { type: "image", src: "assets/2/webpage_design (2).jpg", link: "https://topmedclinics.com/"  },
+                  { type: "image", src: "assets/2/webpage_design (3).jpg", link: "https://spacenll.site/shop"  },
+                { type: "image", src: "assets/2/webpage_design (4).jpg", link: "https://modernbuildings.site/"  },
+                    { type: "image", src: "assets/2/webpage_design (5).jpg", link: "https://emaar-gulf-global.com/"  }
             ],
             "publications": [
                 { type: "image", src: "assets/3/2d works (1).jpg" },
@@ -195,17 +195,40 @@ $(document).ready(function () {
        
 
         // تحميل العناصر وعرضها في الصفحة
-        assets[folder].forEach(item => {
-            let element;
-            if (item.type === "image") {
-                element = `<div class="gallery-item"><img src="${item.src}" alt=""></div>`;
-            } else if (item.type === "video") {
-                element = `<div class="gallery-item"><video controls><source src="${item.src}" type="video/mp4"></video></div>`;
-            }
-            $("#gallery").append(element);
-        });
+assets[folder].forEach(item => {
+    let element;
+
+    if (item.type === "image") {
+        if (item.link) {
+            element = `
+                <div class="gallery-item">
+                    <a href="${item.link}" target="_blank">
+                        <img src="${item.src}" alt="">
+                    </a>
+                </div>
+            `;
+        } else {
+            element = `
+                <div class="gallery-item">
+                    <img src="${item.src}" alt="">
+                </div>
+            `;
+        }
+
+    } else if (item.type === "video") {
+        element = `
+            <div class="gallery-item">
+                <video controls>
+                    <source src="${item.src}" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        `;
     }
+
+    $("#gallery").append(element);
 });
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
