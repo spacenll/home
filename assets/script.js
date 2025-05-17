@@ -138,7 +138,8 @@ $(document).ready(function () {
                 { type: "image", src: "assets/2/webpage_design (1).jpg" },
                   { type: "image", src: "assets/2/webpage_design (2).jpg" },
                   { type: "image", src: "assets/2/webpage_design (3).jpg" },
-                { type: "image", src: "assets/2/webpage_design (4).jpg" }
+                { type: "image", src: "assets/2/webpage_design (4).jpg" },
+                    { type: "image", src: "assets/2/webpage_design (5).jpg" }
             ],
             "publications": [
                 { type: "image", src: "assets/3/2d works (1).jpg" },
