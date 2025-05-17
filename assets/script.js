@@ -174,6 +174,7 @@ $(document).ready(function () {
                 { type: "image", src: "assets/img/logo (1).jpg" },
                 { type: "image", src: "assets/img/logo (2).jpg" },
                  { type: "image", src: "assets/img/logo (3).jpg" },
+                          { type: "image", src: "assets/img/logo (5).jpg" },
                 { type: "image", src: "assets/img/logo (4).jpg" }
             ],
                     "adsboard": [
