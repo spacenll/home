@@ -170,6 +170,12 @@ $(document).ready(function () {
                  { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
                         { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
             ],
+                      "logo": [
+                { type: "image", src: "assets/img/logo (1).jpg" },
+                { type: "image", src: "assets/img/logo (2).jpg" },
+                 { type: "image", src: "assets/img/logo (3).jpg" },
+                { type: "image", src: "assets/img/logo (4).jpg" }
+            ],
                     "adsboard": [
                         { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
             ],
