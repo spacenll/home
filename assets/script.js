@@ -224,23 +224,19 @@ $(document).ready(function () {
 
             $("#gallery").append(element);
         });
-    } else {
-        $("#gallery").html("<p>لا توجد عناصر في هذا القسم.</p>");
-    }
+   
 }
     // زر الرجوع للأعلى
-    $(window).scroll(function () {
+   $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
-
       $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 0, 'easeInOutExpo');
         return false;
     });
   } // نهاية loadGallery
 });
-
