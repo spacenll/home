@@ -128,108 +128,107 @@ $(document).ready(function () {
     });
 
     // دالة تحميل الصور والفيديوهات بناءً على التصنيف
-    function loadGallery(category) {
-        $("#gallery").html(""); // تفريغ المحتوى السابق
+   function loadGallery(category) {
+    $("#gallery").html(""); // تفريغ المحتوى السابق
 
-        let folder = category === "ramadan" ? "ramadan" : category; // تحديد المجلد
-        let assets = {
-            "websites": [
-               
-                { type: "image", src: "assets/2/webpage_design (1).jpg", link: "https://marktech-agency.com/" },
-                  { type: "image", src: "assets/2/webpage_design (2).jpg", link: "https://topmedclinics.com/"  },
-                  { type: "image", src: "assets/2/webpage_design (3).jpg", link: "https://spacenll.site/shop"  },
-                { type: "image", src: "assets/2/webpage_design (4).jpg", link: "https://modernbuildings.site/"  },
-                    { type: "image", src: "assets/2/webpage_design (5).jpg", link: "https://emaar-gulf-global.com/"  }
-            ],
-            "publications": [
-                { type: "image", src: "assets/3/2d works (1).jpg" },
-                  { type: "image", src: "assets/3/2d works (2).jpg" },
-                  { type: "image", src: "assets/3/2d works (3).jpg" },
-                   { type: "image", src: "assets/3/2d works (1).png" },
-                     { type: "image", src: "assets/3/2d works (2).png" },
-                      { type: "image", src: "assets/3/خط كوفي تربيعي 1.png" },
-                { type: "image", src: "assets/3/خط كوفي تربيعي.png" }
-            ],
-            "ads": [
-                { type: "video", src: "assets/4/CGI works (1).mp4" },
-                       { type: "video", src: "assets/4/CGI works (2).mp4" },
-                         { type: "video", src: "assets/4/motion video (1).mp4" },
-                         { type: "video", src: "assets/4/motion video (2).mp4" }
-            ],
-            "3d-designs": [
-                { type: "image", src: "assets/5/3d works 1.jpg" },
-                { type: "image", src: "assets/5/3d works 2.jpg" },
-                 { type: "image", src: "assets/5/3d works 1.png" },
-                { type: "image", src: "assets/5/3d works.png" },
-                 { type: "image", src: "assets/5/3d works.jpg" }
-            ],
-                 "ramadan": [
-                { type: "image", src: "assets/6/تصماميم رمضانية (3).png" },
-                { type: "image", src: "assets/6/تصماميم رمضانية (1).png" },
-                 { type: "image", src: "assets/6/تصماميم رمضانية (2).png" },
-                { type: "image", src: "assets/6/تصماميم رمضانية (5).png" },
-                 { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
-                        { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
-            ],
-                      "logo": [
-                { type: "image", src: "assets/img/logo (1).jpg" },
-                { type: "image", src: "assets/img/logo (2).jpg" },
-                 { type: "image", src: "assets/img/logo (3).jpg" },
-                          { type: "image", src: "assets/img/logo (5).jpg" },
-                { type: "image", src: "assets/img/logo (4).jpg" }
-            ],
-                    "adsboard": [
-                        { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
-            ],
-                     "productbackground": [
-                        { type: "image", src: "assets/8/تصميم خلفية للمنتجات (1).jpg" },
-                          { type: "image", src: "assets/8/تصميم خلفية للمنتجات (2).jpg" }
-            ],
-            "logo-animation": [
-                { type: "video", src: "assets/1/logo motion.mp4" }
-            
-            ]
-        };
+    let folder = category === "ramadan" ? "ramadan" : category;
 
-    
-       
+    let assets = {
+        "websites": [
+            { type: "image", src: "assets/2/webpage_design (1).jpg", link: "https://marktech-agency.com/" },
+            { type: "image", src: "assets/2/webpage_design (2).jpg", link: "https://topmedclinics.com/" },
+            { type: "image", src: "assets/2/webpage_design (3).jpg", link: "https://spacenll.site/shop" },
+            { type: "image", src: "assets/2/webpage_design (4).jpg", link: "https://modernbuildings.site/" },
+            { type: "image", src: "assets/2/webpage_design (5).jpg", link: "https://emaar-gulf-global.com/" }
+        ],
+        "publications": [
+            { type: "image", src: "assets/3/2d works (1).jpg" },
+            { type: "image", src: "assets/3/2d works (2).jpg" },
+            { type: "image", src: "assets/3/2d works (3).jpg" },
+            { type: "image", src: "assets/3/2d works (1).png" },
+            { type: "image", src: "assets/3/2d works (2).png" },
+            { type: "image", src: "assets/3/خط كوفي تربيعي 1.png" },
+            { type: "image", src: "assets/3/خط كوفي تربيعي.png" }
+        ],
+        "ads": [
+            { type: "video", src: "assets/4/CGI works (1).mp4" },
+            { type: "video", src: "assets/4/CGI works (2).mp4" },
+            { type: "video", src: "assets/4/motion video (1).mp4" },
+            { type: "video", src: "assets/4/motion video (2).mp4" }
+        ],
+        "3d-designs": [
+            { type: "image", src: "assets/5/3d works 1.jpg" },
+            { type: "image", src: "assets/5/3d works 2.jpg" },
+            { type: "image", src: "assets/5/3d works 1.png" },
+            { type: "image", src: "assets/5/3d works.png" },
+            { type: "image", src: "assets/5/3d works.jpg" }
+        ],
+        "ramadan": [
+            { type: "image", src: "assets/6/تصماميم رمضانية (3).png" },
+            { type: "image", src: "assets/6/تصماميم رمضانية (1).png" },
+            { type: "image", src: "assets/6/تصماميم رمضانية (2).png" },
+            { type: "image", src: "assets/6/تصماميم رمضانية (5).png" },
+            { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
+            { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
+        ],
+        "logo": [
+            { type: "image", src: "assets/img/logo (1).jpg" },
+            { type: "image", src: "assets/img/logo (2).jpg" },
+            { type: "image", src: "assets/img/logo (3).jpg" },
+            { type: "image", src: "assets/img/logo (5).jpg" },
+            { type: "image", src: "assets/img/logo (4).jpg" }
+        ],
+        "adsboard": [
+            { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
+        ],
+        "productbackground": [
+            { type: "image", src: "assets/8/تصميم خلفية للمنتجات (1).jpg" },
+            { type: "image", src: "assets/8/تصميم خلفية للمنتجات (2).jpg" }
+        ],
+        "logo-animation": [
+            { type: "video", src: "assets/1/logo motion.mp4" }
+        ]
+    };
 
-        // تحميل العناصر وعرضها في الصفحة
-assets[folder].forEach(item => {
-    let element;
+    // ✅ التحقق من وجود المجلد داخل assets قبل التكرار
+    if (assets[folder]) {
+        assets[folder].forEach(item => {
+            let element;
 
-    if (item.type === "image") {
-        if (item.link) {
-            element = `
-                <div class="gallery-item">
-                    <a href="${item.link}" target="_blank">
-                        <img src="${item.src}" alt="">
-                    </a>
-                </div>
-            `;
-        } else {
-            element = `
-                <div class="gallery-item">
-                    <img src="${item.src}" alt="">
-                </div>
-            `;
-        }
+            if (item.type === "image") {
+                if (item.link) {
+                    element = `
+                        <div class="gallery-item">
+                            <a href="${item.link}" target="_blank">
+                                <img src="${item.src}" alt="">
+                            </a>
+                        </div>
+                    `;
+                } else {
+                    element = `
+                        <div class="gallery-item">
+                            <img src="${item.src}" alt="">
+                        </div>
+                    `;
+                }
+            } else if (item.type === "video") {
+                element = `
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="${item.src}" type="video/mp4">
+                            متصفحك لا يدعم تشغيل الفيديو.
+                        </video>
+                    </div>
+                `;
+            }
 
-    } else if (item.type === "video") {
-        element = `
-            <div class="gallery-item">
-                <video controls>
-                    <source src="${item.src}" type="video/mp4">
-                    متصفحك لا يدعم تشغيل الفيديو.
-                </video>
-            </div>
-        `;
+            $("#gallery").append(element);
+        });
+    } else {
+        $("#gallery").html("<p>لا توجد عناصر في هذا القسم.</p>");
     }
 
-    $("#gallery").append(element);
-});
-
-    // Back to top button
+    // زر الرجوع للأعلى
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.back-to-top').fadeIn('slow');
@@ -237,7 +236,9 @@ assets[folder].forEach(item => {
             $('.back-to-top').fadeOut('slow');
         }
     });
+
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 0, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 0, 'easeInOutExpo');
         return false;
     });
+}
