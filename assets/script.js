@@ -227,7 +227,7 @@ $(document).ready(function () {
     } else {
         $("#gallery").html("<p>لا توجد عناصر في هذا القسم.</p>");
     }
-
+}
     // زر الرجوع للأعلى
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -241,4 +241,4 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 0, 'easeInOutExpo');
         return false;
     });
-}
+
