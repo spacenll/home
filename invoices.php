@@ -1,39 +1,60 @@
 <?php
 session_start();
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+
+// تحقق من الجلسة
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header("Location: login.php");
     exit;
 }
+
+$invoicesDir = __DIR__ . '/INVOICES';
+$files = scandir($invoicesDir);
 ?>
 
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>قائمة الفواتير</title>
-  <style>
-    body { font-family: Arial; direction: rtl; padding: 20px; background-color: #fff; }
-    h2 { color: #333; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin: 10px 0; }
-    a { text-decoration: none; color: #0066cc; }
-    a:hover { text-decoration: underline; }
-    .logout { position: fixed; left: 20px; top: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <title>قائمة الفواتير</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+            background: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            list-style: none;
+            box-shadow: 0 0 10px #ccc;
+        }
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-  <a class="logout" href="logout.php">تسجيل الخروج</a>
-  <h2>قائمة الفواتير</h2>
-  <ul>
-    <?php
-      $dir = "INVOICES";
-      $files = scandir($dir);
-      foreach ($files as $file) {
-        if (pathinfo($file, PATHINFO_EXTENSION) === 'pdf') {
-          echo "<li><a href='$dir/$file' target='_blank'>$file</a></li>";
-        }
-      }
-    ?>
-  </ul>
+
+<h2>📄 قائمة الفواتير</h2>
+<ul>
+<?php
+foreach ($files as $file) {
+    if ($file === '.' || $file === '..') continue;
+    echo "<li><a href='INVOICES/$file' target='_blank'>$file</a></li>";
+}
+?>
+</ul>
+
 </body>
 </html>
