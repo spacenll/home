@@ -51,7 +51,7 @@ $files = scandir($invoicesDir);
 <?php
 foreach ($files as $file) {
     if ($file === '.' || $file === '..') continue;
-    echo "<li><a href='INVOICES/$file' target='_blank'>$file</a></li>";
+    echo "<li><a href='https://spacenll.site/INVOICES/$file' target='_blank'>$file</a></li>";
 }
 ?>
 </ul>
