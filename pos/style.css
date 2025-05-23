@@ -11,6 +11,8 @@ html {
 }
 section .pos{
   margin:30px 0 30px 0;
+  justify-self: center;
+  
     background: #20232c;
     padding: 100px;
 }
