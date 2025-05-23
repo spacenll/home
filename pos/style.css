@@ -9,7 +9,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.pos{
+section .pos{
   margin:30px 0 30px 0;
     background: #20232c;
     padding: 100px;
