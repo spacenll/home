@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 .pos{
-  margin: 30px;
+  margin:30px 0 30px 0;
     background: #20232c;
     padding: 100px;
 }
