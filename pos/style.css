@@ -9,7 +9,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+.pos{
+    background: #20232c;
+    padding: 100px;
+}
 /* Lightbox الخلفية */
 .lightbox {
   position: fixed;
