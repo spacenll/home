@@ -19,3 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+// Lightbox logic
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+
+// فتح الصورة
+document.querySelectorAll(".zoomable").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  });
+});
+
+// إغلاق الصورة
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+// إغلاق عند الضغط بالخلفية
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+});
