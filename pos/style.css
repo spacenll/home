@@ -17,6 +17,23 @@ html {
   border-radius: 10px;
   text-align: center;
 }
+.pos-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Media query للموبايل */
+@media (max-width: 600px) {
+  .pos-img {
+    width: 90%;
+  }
+
+  .pos {
+    padding: 30px 15px;
+  }
+}
+
 /* Lightbox الخلفية */
 .lightbox {
   position: fixed;
