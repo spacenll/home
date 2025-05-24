@@ -138,25 +138,25 @@ closeCart();
 // الحصول على سعر المنتج
 function getProductPrice(productId) {
     const prices = {
-          121: { name: "Karak #4", price: 3.5 },
-    120: { name: "Latte #4", price: 3.5 },
-    119: { name: "Creamy #4", price: 3.5 },
-    118: { name: "Azura #4", price: 3.5 },
-    117: { name: "Bronze #1", price: 3.5 },
-    116: { name: "White #1", price: 3.5 },
-    115: { name: "Celestial #1", price: 3.5 },
-    114: { name: "Black #1", price: 3.5 },
-    113: { name: "Red #1", price: 3.5 },
-    112: { name: "Rosa #1", price: 3.5 },
-    109: { name: "Couco #3", price: 3.5 },
-    108: { name: "White #2", price: 3.5 },
-    107: { name: "Green #2", price: 3.5 },
-    106: { name: "Yashma #2", price: 3.5 },
-    105: { name: "Brown #2", price: 3.5 },
-    104: { name: "Blue #1", price: 3.5 },
-    103: { name: "Spiral #1", price: 3.5 },
-    102: { name: "Turquoise #1", price: 3.5 },
-    101: { name: "Yellow #1", price: 3.5 }
+          121: { name: "Karak #4", price: 2 },
+    120: { name: "Latte #4", price: 2 },
+    119: { name: "Creamy #4", price: 2 },
+    118: { name: "Azura #4", price: 2 },
+    117: { name: "Bronze #1", price: 2 },
+    116: { name: "White #1", price: 2 },
+    115: { name: "Celestial #1", price: 2 },
+    114: { name: "Black #1", price: 2 },
+    113: { name: "Red #1", price: 2 },
+    112: { name: "Rosa #1", price: 2 },
+    109: { name: "Couco #3", price: 2 },
+    108: { name: "White #2", price: 2 },
+    107: { name: "Green #2", price: 2 },
+    106: { name: "Yashma #2", price: 2 },
+    105: { name: "Brown #2", price: 2 },
+    104: { name: "Blue #1", price: 2 },
+    103: { name: "Spiral #1", price: 2 },
+    102: { name: "Turquoise #1", price: 2 },
+    101: { name: "Yellow #1", price: 2 }
 
     };
     return prices[productId] || { name: "غير معروف", price: 0 };
@@ -169,15 +169,9 @@ function calculateTotal(includeDelivery = false, deliveryCost = 0) {
 
     // تطبيق الخصم حسب عدد الأكواب
     let cupsCost = 0;
-    if (totalItems === 2) {
-        cupsCost = 6;
-    } else if (totalItems === 3) {
-        cupsCost = 9;
-    } else if (totalItems > 3) {
-        cupsCost = 9 + (totalItems - 3) * 3.5;
-    } else {
-        cupsCost = totalItems * 3.5; // السعر العادي
-    }
+ 
+        cupsCost = totalItems * 2; // السعر العادي
+   
 
     const total = includeDelivery ? cupsCost + deliveryCost : cupsCost;
     return total;
@@ -224,10 +218,10 @@ if (totalItems === 2) {
 } else if (totalItems === 3) {
     cupsCost = 9;
 } else if (totalItems > 3) {
-    cupsCost = 9 + (totalItems - 3) * 3.5;
+    cupsCost = 9 + (totalItems - 3) * 2;
 }
 
-// استبدال السعر الكلي للأكواب بدلًا من حسابهم كلهم بسعر 3.5
+// استبدال السعر الكلي للأكواب بدلًا من حسابهم كلهم بسعر 2
 const productsTotal = cupsCost;
 
 // حساب المجموع النهائي
