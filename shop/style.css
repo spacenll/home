@@ -10,6 +10,37 @@
     margin-top: 20px;
 
 }
+  .ticker-wrapper {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #d62828;
+      color: white;
+      overflow: hidden;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      direction: ltr; /* الحركة من اليسار لليمين */
+    }
+
+    .ticker-content {
+      display: inline-block;
+      white-space: nowrap;
+           font: bold;
+        color: azure;
+      padding-left: 100%; /* لبدء المحتوى من خارج الشاشة اليسرى */
+      animation: scroll-right 20s linear infinite;
+    }
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
 .social-icons .icon {
     text-decoration: none;
     color: #ffffff;
