@@ -10,6 +10,21 @@ html {
     scroll-behavior: smooth;
      direction:rtl;
 }
+/* تأثير Fade-in لجميع الصور تلقائيًا */
+img {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInUp 1s ease forwards; /* تشغيل الأنيميشن */
+}
+
+/* تعريف الأنيميشن */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 p{
     padding-bottom: 20px;
 }

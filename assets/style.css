@@ -1,3 +1,6 @@
+
+
+
 .copyright{
     background: #824c30;
     padding: 50px;
@@ -10,6 +13,8 @@
     margin-top: 20px;
 
 }
+/* تأثير Fade-in مع تكبير الصور */
+
 .social-icons .icon {
     text-decoration: none;
     color: #ffffff;

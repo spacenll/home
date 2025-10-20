@@ -28,13 +28,25 @@ document.addEventListener("DOMContentLoaded", function () {
             service2_desc: "موشن جرافيك، مونتاج، وإعلانات CGI.",
             service3: "البرمجة والمواقع",
             service3_desc: "تطوير المواقع، برامج المحاسبة، والصيانة.",
-            our_work: "اعمالي",
+            our_work: "بعض اعمالي",
             contact_us: "تواصل معي",
+            pos: "المحاسبة",
+            pos_butt: "لطلب برنامج المحاسبة",
             location: "📍 عمان - صلالة",
             phone: "📞 +968 77267075",
             website: "🌍 موقعي الإلكتروني",
             ourserveice: "خدماتي",
             ourworks: "بعض اعمالي",
+            logo_lan: "الشعارات",
+corner_lan: "كورنر وبوث",
+cups_lan: "اكواب",
+boxes_lan: "بوكسات",
+interface_lan: "الواجهات والاعلانات",
+cards_lan: "القسائم والكتيبات",
+publications_lan: "الأعمال والمنشورات",
+websites_lan: "المواقع الالكترونية",
+ads_lan: "اعلانات الفيديو",
+logo_animation_lan: "تحريك اللوغو",
             footer: "© 2025 Eng. Ala Aldin Mohamed Khalil - جميع الحقوق محفوظة"
             
         },
@@ -54,7 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
             service3: "Web & Software",
             service3_desc: "Website development, accounting software, and IT support.",
             our_work: "My Work",
+             pos: "POS",
+             pos_butt: "contact",
             contact_us: "Contact me",
+            logo_lan: "logo",
+corner_lan: "corner",
+cups_lan: "cups",
+boxes_lan: "boxes",
+interface_lan: "interface",
+cards_lan: "cards",
+publications_lan: "publications",
+websites_lan: "websites",
+ads_lan: "ads",
+logo_animation_lan: "logo-animation",
             location: "📍 Oman - Salalah",
             phone: "📞 +968 77267075",
             website: "🌍 My Website",
@@ -90,7 +114,19 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("sservices").textContent = translations[lang].ourserveice;
         document.getElementById("wworks").textContent = translations[lang]. our_work;
         document.getElementById("phone").textContent = translations[lang].phone;
-        
+         document.getElementById("pos").textContent = translations[lang].pos; 
+        document.getElementById("logo_lan").textContent = translations[lang].logo_lan;
+document.getElementById("corner_lan").textContent = translations[lang].corner_lan;
+document.getElementById("cups_lan").textContent = translations[lang].cups_lan;
+document.getElementById("boxes_lan").textContent = translations[lang].boxes_lan;
+document.getElementById("interface_lan").textContent = translations[lang].interface_lan;
+document.getElementById("cards_lan").textContent = translations[lang].cards_lan;
+document.getElementById("publications_lan").textContent = translations[lang].publications_lan;
+document.getElementById("websites_lan").textContent = translations[lang].websites_lan;
+document.getElementById("ads_lan").textContent = translations[lang].ads_lan;
+document.getElementById("logo_animation_lan").textContent = translations[lang].logo_animation_lan;
+
+        document.getElementById("pos_butt").textContent = translations[lang].pos_butt;
         document.getElementById("footer").textContent = translations[lang].footer;
 
         // تخزين اللغة المحددة في localStorage
@@ -117,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $(document).ready(function () {
     // تحميل جميع الصور والفيديوهات عند تحميل الصفحة
-    loadGallery("ramadan");
+    loadGallery("logo");
 
     // عند النقر على زر تصفية
     $(".filter-btn").click(function () {
@@ -131,7 +167,7 @@ $(document).ready(function () {
    function loadGallery(category) {
     $("#gallery").html(""); // تفريغ المحتوى السابق
 
-    let folder = category === "ramadan" ? "ramadan" : category;
+    let folder = category === "logo" ? "logo" : category;
 
     let assets = {
         "websites": [
@@ -141,21 +177,46 @@ $(document).ready(function () {
             { type: "image", src: "assets/2/webpage_design (4).jpg", link: "https://modernbuildings.site/" },
             { type: "image", src: "assets/2/webpage_design (5).jpg", link: "https://emaar-gulf-global.com/" }
         ],
-        "publications": [
-            { type: "image", src: "assets/3/2d works (1).jpg" },
-            { type: "image", src: "assets/3/2d works (2).jpg" },
-            { type: "image", src: "assets/3/2d works (3).jpg" },
-            { type: "image", src: "assets/3/2d works (1).png" },
-            { type: "image", src: "assets/3/2d works (2).png" },
-            { type: "image", src: "assets/3/خط كوفي تربيعي 1.png" },
-            { type: "image", src: "assets/3/خط كوفي تربيعي.png" }
-        ],
+    "cups": [
+    { "type": "image", "src": "assets/3/1 (1).jpg" },
+    { "type": "image", "src": "assets/3/1 (2).jpg" },
+    { "type": "image", "src": "assets/3/1 (3).jpg" },
+    { "type": "image", "src": "assets/3/1 (4).jpg" },
+    { "type": "image", "src": "assets/3/1 (5).jpg" },
+    { "type": "image", "src": "assets/3/1 (7).jpg" }
+],
+        
+            "boxes": [
+    { "type": "image", "src": "assets/5/1.png" },
+    { "type": "image", "src": "assets/5/2.png" },
+    { "type": "image", "src": "assets/5/1 (1).jpg" },
+    { "type": "image", "src": "assets/5/1 (2).jpg" },
+    { "type": "image", "src": "assets/5/1 (3).jpg" },
+    { "type": "image", "src": "assets/5/1 (4).jpg" },
+    { "type": "image", "src": "assets/5/1 (5).jpg" },
+    { "type": "image", "src": "assets/5/1 (6).jpg" },
+    { "type": "image", "src": "assets/5/1 (1).jpeg" },
+    { "type": "image", "src": "assets/5/1 (2).jpeg" },
+    { "type": "image", "src": "assets/5/1 (3).jpeg" },
+    { "type": "image", "src": "assets/5/1 (4).jpeg" }
+],       
+        
+        "interface": [
+    { "type": "image", "src": "assets/9/1.jpeg" },
+    { "type": "image", "src": "assets/9/1 (1).jpg" },
+    { "type": "image", "src": "assets/9/1 (2).jpg" },
+    { "type": "image", "src": "assets/9/1 (3).jpg" },
+    { "type": "image", "src": "assets/9/1 (1).png" },
+    { "type": "image", "src": "assets/9/1 (2).png" }
+  
+],
         "ads": [
             { type: "video", src: "assets/4/CGI works (1).mp4" },
             { type: "video", src: "assets/4/CGI works (2).mp4" },
             { type: "video", src: "assets/4/motion video (1).mp4" },
             { type: "video", src: "assets/4/motion video (2).mp4" }
         ],
+        
         "3d-designs": [
             { type: "image", src: "assets/5/3d works 1.jpg" },
             { type: "image", src: "assets/5/3d works 2.jpg" },
@@ -163,27 +224,42 @@ $(document).ready(function () {
             { type: "image", src: "assets/5/3d works.png" },
             { type: "image", src: "assets/5/3d works.jpg" }
         ],
-        "ramadan": [
-            { type: "image", src: "assets/6/تصماميم رمضانية (3).png" },
-            { type: "image", src: "assets/6/تصماميم رمضانية (1).png" },
-            { type: "image", src: "assets/6/تصماميم رمضانية (2).png" },
-            { type: "image", src: "assets/6/تصماميم رمضانية (5).png" },
-            { type: "image", src: "assets/6/تصماميم رمضانية (6).png" },
-            { type: "image", src: "assets/6/تصماميم رمضانية (4).png" }
+        "corner": [
+            { type: "image", src: "assets/6/1 (1).jpeg" },
+            { type: "image", src: "assets/6/1 (1).jpg" },
+            { type: "image", src: "assets/6/1 (1).png" },
+            { type: "image", src: "assets/6/1 (2).jpeg" },
+            { type: "image", src: "assets/6/1 (2).jpg" },
+            { type: "image", src: "assets/6/1 (3).jpg" }
+        ],
+            "cards": [
+            { type: "image", src: "assets/8/1 (1).jpg" },
+            { type: "image", src: "assets/8/1 (2).jpg" },
+            { type: "image", src: "assets/8/1.jpeg" },
+            { type: "image", src: "assets/8/1.png" }
+         
         ],
         "logo": [
-            { type: "image", src: "assets/img/logo (1).jpg" },
-            { type: "image", src: "assets/img/logo (2).jpg" },
-            { type: "image", src: "assets/img/logo (3).jpg" },
-            { type: "image", src: "assets/img/logo (5).jpg" },
-            { type: "image", src: "assets/img/logo (4).jpg" }
+            { type: "image", src: "assets/7/1 (1).jpg" },
+            { type: "image", src: "assets/7/1 (2).jpg" },
+            { type: "image", src: "assets/7/1 (1).png" },
+            { type: "image", src: "assets/7/1 (2).png" },
+            { type: "image", src: "assets/7/1 (3).png" }
         ],
         "adsboard": [
             { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
         ],
-        "productbackground": [
-            { type: "image", src: "assets/8/تصميم خلفية للمنتجات (1).jpg" },
-            { type: "image", src: "assets/8/تصميم خلفية للمنتجات (2).jpg" }
+        "publications": [
+         { "type": "image", "src": "assets/10/1 (1).jpg" },
+    { "type": "image", "src": "assets/10/1 (2).jpg" },
+    { "type": "image", "src": "assets/10/1 (3).jpg" },
+    { "type": "image", "src": "assets/10/1 (4).jpg" },
+    { "type": "image", "src": "assets/10/1 (5).jpg" },
+    { "type": "image", "src": "assets/10/1 (6).jpg" },
+    { "type": "image", "src": "assets/10/1 (7).jpg" },
+         { "type": "image", "src": "assets/10/1 (1).jpeg" },
+    { "type": "image", "src": "assets/10/1 (2).jpeg" },
+    { "type": "image", "src": "assets/10/1 (3).jpeg" }    
         ],
         "logo-animation": [
             { type: "video", src: "assets/1/logo motion.mp4" }
