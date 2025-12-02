@@ -13,7 +13,8 @@
     <meta name="description" content="علاء الدين خليل - مصمم جرافيكي محترف في صلالة، متخصص في تصميم الشعارات، الهوية البصرية، الإعلانات، والمطبوعات. أعمل على تقديم تصاميم مبتكرة تواكب أحدث الاتجاهات وتلبي احتياجات عملائي. تواصل الآن لتحقيق رؤيتك الإبداعية!" />
 <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
     <title>Eng. Ala Aldin Khalil - المهندس علاء الدين خليل</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles.css"> 
+    <link rel="stylesheet" href="assets/services.css">
     <script src="assets/script.js" defer></script>
 
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -54,7 +55,7 @@
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+96877267075",
+    "telephone": "+96877267075&",
     "contactType": "customer service",
     "areaServed": ["OM", "AE", "SA", "KW", "BH", "QA"],
     "availableLanguage": ["Arabic", "English"]
@@ -77,7 +78,7 @@
     "https://www.instagram.com/spacenll/",
     "https://x.com/spacenll",
     "https://www.pinterest.com/spacenll/",
-    "https://wa.me/96877267075",
+    "https://api.whatsapp.com/send?phone=96877267075&",
     "https://www.facebook.com/alaakhalil99",
     "https://www.tiktok.com/@spacenll"
   ],
@@ -91,14 +92,13 @@
   <header>
     <nav>
           <span class="menu-toggle" id="menuToggle">☰</span>
-        <div class="logo" style="color: #fff; margin: 10px 0 0 0;">spacenll</div>
+        <div class="logo" style="color: #fff; margin: 10px 0 0 0;"><img src="assets/img/logo.png"></div>
          
         <ul class="nav-links" id="navLinks">
             <li><a id="nav-home" href="/">الرئيسية</a></li>
-            <li><a id="nav-services" href="#services">الخدمات</a></li>
-                    <li><a id="shop" href="/shop">متجري</a></li>
-                           <li><a id="pos" href="/pos">المحاسبة</a></li>
-            <li><a id="nav-portfolio" href="#portfolio">اعمالي</a></li>
+            <li><a id="nav-services" href="#services">الخدمات</a></li>  
+            <li><a id="nav-portfolio" href="#portfolio">الاعمال</a></li>
+            <li><a id="nav-portfolio" href="#price_section">الأسعار</a></li>
             <li><a id="nav-contact" href="#contact">تواصل معي</a></li>
         </ul>
         <button id="langToggle" class="btn2">EN</button>
@@ -106,36 +106,41 @@
 </header>
 
 <section id="home" class="hero">
+    
     <div class="hero-content">
-        <img src="assets/img/hero-bg.jpg">
+        <img src="assets/img/hero-bg.png">
         <h1 id="hero-title" >مرحبًا بك في عالم الإبداع</h1>
         <p id="hero-desc">اقدم لك أفضل الحلول في التصميم، البرمجة، والمونتاج</p>
         <a id="explore-btn" href="#services" class="btn">استكشف خدماتي</a>
     </div>
+     <div class="particle" style="top: 20%; left: 15%; animation-duration: 6s; animation-delay: 0s;"></div>
+    <div class="particle" style="top: 60%; left: 30%; animation-duration: 8s; animation-delay: 1s;"></div>
+    <div class="particle" style="top: 40%; left: 70%; animation-duration: 7s; animation-delay: 2s;"></div>
+    <div class="particle" style="top: 75%; left: 50%; animation-duration: 9s; animation-delay: 3s;"></div>
+    <div class="particle" style="top: 25%; left: 80%; animation-duration: 6s; animation-delay: 1.5s;"></div>
+    <div class="particle" style="top: 10%; left: 45%; animation-duration: 10s; animation-delay: 2.5s;"></div>
 </section>
 
-<section id="services">
+<section id="services" class="services-section">
        <h2 style="display:none;">مصمم جرافيك صلالة مفتوح الآن</h2>
     <h2 id="sservices">الخدمات الرئيسية لـ علاء الدين خليل</h2>
     <div class="services-container">
-        <div class="service-box">
-            <i class="fa-solid fa-paint-brush"></i>
+        <div class="service-card">
+            
             <h3 id="service1">التصميم الجرافيكي</h3>
             <p id="service1-desc">تصميم الشعارات، الإعلانات، والبطاقات.</p>
         </div>
-        <div class="service-box">
+        <div class="service-card">
                 <h2 style="display:none;">مصمم مواقع صلالة مفتوح الآن</h2>
-            <i class="fa-solid fa-video"></i>
+       
             <h3 id="service2">تصميم الفيديو</h3>
             <p id="service2-desc">موشن جرافيك، مونتاج، وإعلانات CGI.</p>
         </div>
-        <div class="service-box">
-            <i class="fa-solid fa-laptop-code"></i>
+        <div class="service-card">
+     
             <h3 id="service3">البرمجة والمواقع</h3>
             <p id="service3-desc">تطوير المواقع، برامج المحاسبة، والصيانة.</p>
-                  <button class="filter-btn" id="pos_butt" onclick="window.location.href='/pos';">
-  لطلب برنامج المحاسبة
-</button>
+                 
         </div>
     </div>
 </section>
@@ -163,8 +168,151 @@
         <h2 style="display:none;">معرض الأعمال من الصور والفيديوهات</h2>
   <p style="display:none;">اكتشف أحدث الأعمال الإبداعية من الصور والفيديوهات التي تم إنشاؤها بواسطة علاء الدين، وتعرف على التفاصيل المبدعة في كل عمل.</p>
     </section>
+    <!-- قسم الخدمات (HTML فقط — CSS خارجي في ملف services.css) -->
+<section id="price_section" class="services-section" dir="rtl" aria-labelledby="services-title">
+<h2 id="services-title" class="section-title">الخدمات والأسعار</h2>
+
+
+<div class="services-grid">
+
+
+<!-- بطاقة خدمة (تكرر لكل خدمة) -->
+<article class="service-card" data-service="logo">
+    <h3 class="service-title">تصميم شعار</h3>
+<div class="price-row">
+<div class="price">8 - 25</div>
+<div class="currency" aria-hidden="true">
+<!-- رمز العملة بصيغة SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+</div>
+</div>
+
+<p class="service-desc">شعار عربي وصوري ورمزي بجودة عالية واحترافية.</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%B4%D8%B9%D8%A7%D8%B1">اطلب الآن</a>
+</article>
+
+
+<article class="service-card" data-service="website">
+    <h3 class="service-title">إنشاء موقع إلكتروني</h3>
+<div class="price-row">
+<div class="price">50 - 100</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+</div>
+</div>
     
-<section id="contact" >
+
+<p class="service-desc">لشركات والأفراد — يتضمن تحسين محركات البحث وسيرفر سريع.</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D9%86%D8%B4%D8%A7%D8%A1%20%D9%85%D9%88%D9%82%D8%B9%20%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A">اطلب الآن</a>
+</article>
+
+
+<article class="service-card" data-service="links-site"><h3 class="service-title">إنشاء موقع للروابط</h3>
+<div class="price-row">
+<div class="price">15</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+</div>
+</div>
+
+<p class="service-desc">موقع روابط للكاڤيه/المطعم لتسهيل وصول الزبائن للفروع وروابط التواصل والمنيو.</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D9%86%D8%B4%D8%A7%D8%A1%20%D9%85%D9%88%D9%82%D8%B9%20%D9%84%D9%84%D8%B1%D9%88%D8%A7%D8%A8%D8%B7">اطلب الآن</a>
+</article>
+
+
+<article class="service-card" data-service="shop"><h3 class="service-title">إنشاء متجر إلكتروني</h3>
+<div class="price-row">
+<div class="price">25 - 50</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+</div>
+</div>
+
+<p class="service-desc">عرض المنتجات والأسعار — السعر يعتمد على عدد المنتجات.</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A5%D9%86%D8%B4%D8%A7%D8%A1%20%D9%85%D8%AA%D8%AC%D8%B1%20%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A">اطلب الآن</a>
+</article>
+
+
+<article class="service-card" data-service="pos"><h3 class="service-title">برنامج محاسبة POS</h3>
+<div class="price-row">
+<div class="price">150</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+</div>
+</div>
+
+<p class="service-desc">يعمل على نظام الويندوز لإدارة المبيعات والمخزون.</p>
+<a class="order-btn" href="/pos">اطلب الآن</a>
+</article>
+
+
+<article class="service-card" data-service="motion">
+        <h3 class="service-title">تصميم فيديو جرافيك</h3>
+<div class="price-row">
+<div class="price">45</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+    </div>
+    </div>
+
+<p class="service-desc">تصميم فيديو موشن جرافيك</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20POS">اطلب الآن</a>
+    </article>
+    
+    
+    <article class="service-card" data-service="3d">
+        <h3 class="service-title">تصميم واجهات ثلاثية الابعاد</h3>
+<div class="price-row">
+<div class="price">50</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+    </div>
+    </div>
+
+<p class="service-desc">واجهات انيقة وعصرية حسب طلبك والمخطط</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20POS">اطلب الآن</a>
+    </article>
+    
+     <article class="service-card" data-service="3d">
+        <h3 class="service-title">تصميم كاونتر او بوث</h3>
+<div class="price-row">
+<div class="price">100</div>
+<div class="currency" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" viewBox="0 0 212.82 129.24">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <path d="M80.99,63.96c-.44-12.71,3.64-25.13,11.04-35.35,6.05-8.35,12.07-11.3,22.45-8.29,7.67,2.22,14.42,7.47,19.91,13.09l-6.92,27.14c-.37.1-.37-.15-.53-.32-2.26-2.24-4.28-4.8-6.67-6.99-6.98-6.36-19.14-13.83-28.41-7.72-8.59,5.66-.57,13.41,4.03,18.45h98.18l-10.62,18.21h-63.94c1.22.95,2.69,1.75,4.05,2.5,3.57,1.98,7.57,3.9,11.41,5.28,1.18.42,5.29,1.89,6.26,1.89h34.24l-10.72,18.21H18.76l10.72-18.21h65.74c-2.68-3.13-5.39-6.24-7.68-9.68h-50.37l10.62-18.21h33.2Z"/>
+</svg>
+    </div>
+    </div>
+
+<p class="service-desc">نصمملك كاونتر بيع او بوث حسب طلبك وذوقك</p>
+<a class="order-btn" href="https://api.whatsapp.com/send?phone=96877267075&text=%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20POS">اطلب الآن</a>
+    </article>
+    </div>
+    </section>
+
+    <section id="contact" >
     <h2 id="contact-title">الملفات الشخصية لـ علاء الدين خليل</h2>
     <p id="location">📍 عمان - صلالة</p>
     <p id="phone">📞 +968 77267075</p>
@@ -188,7 +336,7 @@
 <a href="https://www.facebook.com/alaakhalil99" target="_blank" class="icon facebook" title="علاء الدين خليل - فيسبوك">
   <i class="fab fa-facebook"></i>
 </a>
-<a href="https://wa.me/96877267075" target="_blank" class="icon whatsapp" title="علاء الدين خليل - واتساب">
+<a href="https://api.whatsapp.com/send?phone=96877267075&" target="_blank" class="icon whatsapp" title="علاء الدين خليل - واتساب">
   <i class="fab fa-whatsapp"></i>
 </a>
 <a href="https://pin.it/7J3XF1KtV" target="_blank" class="icon pinterest" title="علاء الدين خليل - بينتريست">
