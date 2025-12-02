@@ -1,0 +1,123 @@
+/* services.css */
+
+/* قواعد عامة */
+.services-section {
+  padding: 40px 20px;
+ box-shadow: 1px -1px 20px 20px #3e3e3e;
+  background: #f7f7f8;
+  color: #222;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+/* شبكة البطاقات */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+/* البطاقة */
+.service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .18s ease, box-shadow .18s ease;
+  
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* صف السعر والرمز */
+.price-row {
+    display: flex;
+    flex-direction: row;
+        align-self: anchor-center;
+}
+
+.price {
+    order: 1;
+    font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.currency {
+    order: 2;
+}
+
+
+
+.currency svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+}
+
+/* عنوان الخدمة والوصف */
+.service-title {
+  margin: 10px 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.service-desc {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+  opacity: 0.95;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+/* زر الطلب */
+.order-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #0066ff;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  transition: background .15s ease, transform .12s ease;
+  
+}
+
+.order-btn:hover {
+  transform: translateY(-2px);
+  background: #0051d4;
+}
+
+/* استجابة أصغر للشاشات */
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 22px;
+  }
+  .price {
+    font-size: 26px;
+  }
+  .services-grid {
+    gap: 14px;
+  }
+  .service-card {
+    padding: 14px;
+  }
+}
