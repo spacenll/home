@@ -9,6 +9,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.currency {
+    order: 2;
+}
+.price-row {
+    display: inline-flex;
+    flex-direction: row;
+        align-self: anchor-center;
+}
+.currency svg {
+  width: 28px;
+  height: 28px;
+    color: #d10f0f;
+  opacity: 0.8;
+}
 .pos {
   margin: 30px auto;
   padding: 60px 30px;
@@ -159,6 +174,7 @@ img:hover {
   max-width: 700px;
 }
 .discounted {
+    order: 1;
   color: #d10f0f;
   font-size: 1.5em;
   font-weight: bold;
