@@ -1,9 +1,8 @@
 /* services.css */
 
-/* قواعد عامة */
 .services-section {
-  padding: 40px 20px;
- box-shadow: 1px -1px 20px 20px #3e3e3e;
+  padding: 50px 50px;
+ 
   background: #f7f7f8;
   color: #222;
 }
@@ -58,6 +57,13 @@
   color: #0f172a;
   line-height: 1;
 }
+.price1 {
+    order: 1;
+    font-size: 30px;
+  font-weight: 800;
+  color: green;
+  line-height: 1;
+}
 
 .currency {
     order: 2;
@@ -93,7 +99,7 @@
   text-decoration: none;
   padding: 10px 12px;
   border-radius: 10px;
-  background: #0066ff;
+  background: #2563eb;
   color: white;
   font-weight: 700;
   text-align: center;

@@ -1,9 +1,10 @@
+/*style.css*/
 body {
     font-family: Alexandria;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #fff;
+    background-color: #f7f7f8;
+    color: #fff ;
     text-align: center;
 }
 html {
@@ -34,8 +35,8 @@ p{
 .back-to-top {
     position: fixed;
     display: none;
-    background: #f16724;
-    color: #121518;
+    background: #2563eb;
+    color: #fff;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -49,7 +50,7 @@ p{
 }
 
 .back-to-top:hover {
-    color: #f16724;
+    color: #fff;
     background: #121518;
 }
 
@@ -59,21 +60,28 @@ p{
 
 
 .filter-btn {
-   font-family: Alexandria;
-    background: #121212;
-    border: 1px solid orange;
+  font-family: Alexandria;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 10%);
     padding: 10px 20px;
     margin: 5px;
+    border: 0px;
+    background: white;
     cursor: pointer;
     font-size: 16px;
-    color: white;
-    border-radius: 5px;
+    color: black;
+    border-radius: 50px;
+      transition: font-size 0.2s ease-in-out , background 0.2s ease-in-out;
 }
 
 .filter-btn.active {
-    background: orange;
+        background-color: #2563eb;
+   color: white;
 }
-
+.filter-btn:hover{
+     font-size: 18px;
+     background: #2563eb;
+    color: white;
+}
 /* المعرض */
 .gallery-container {
     display: flex;
@@ -88,7 +96,7 @@ p{
     height: 500px;
     overflow: hidden;
     border-radius: 10px;
-    border: 2px solid orange;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 10%);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -109,6 +117,7 @@ section{
     padding: 100px 0 100px 0;
 }
 .social-icons {
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -117,8 +126,7 @@ section{
 
 .social-icons .icon {
     text-decoration: none;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
     padding: 15px;
     margin: 5px;
 border-radius: 25px 20px 20px;
@@ -129,19 +137,19 @@ border-radius: 25px 20px 20px;
 }
 
 .social-icons .icon:hover {
-    background-color: #ffffff;
-    color: #f16724;
-    transform: scale(1.1);
+   
+    color: #2563eb;
+    transform: scale(1.05);
 }
 
 
 /* تحسين الشريط العلوي ليكون متجاوبًا */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 15px 20px;
-    background: #1e1e1e;
+    background: #fff;
     position: fixed;
         width: -webkit-fill-available;
     top: 0;
@@ -152,7 +160,11 @@ nav {
 .logo {
     font-size: 22px;
     font-weight: bold;
-    
+    color: #fff;
+    position: fixed;
+    padding: 0 0 0 30px;
+    display: flex;
+    margin: 10px 0 0 0;
     color: white;
 }
 .logo img {
@@ -161,6 +173,7 @@ nav {
  
 }
 .nav-links {
+    z-index: 99;
     list-style: none;
     display: flex;
     gap: 20px;
@@ -171,9 +184,15 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
     text-decoration: none;
     font-size: 16px;
+       transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+.nav-links a:hover{
+    color: royalblue;
+ 
+      font-size: 18px;
 }
 
 /* زر تغيير اللغة */
@@ -212,7 +231,8 @@ nav {
     }
 
     .menu-toggle {
-        display: block;
+                display: flex;
+        margin-left: auto;
     }
 
     .nav-active {
@@ -227,7 +247,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 90vh;
-background: linear-gradient(0deg, #f16724, #000000, #081a33); /* 180deg = عمودي */
+background: linear-gradient(60deg, #7c3aed, #2563eb);
+
 background-size: 100% 300%; /* طول أكبر من العرض للتحرك عمودياً */
 animation: gradientMove 12s linear infinite;
 overflow: hidden;
@@ -260,9 +281,12 @@ overflow: hidden;
 
 
 .btn {
+        transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     padding: 10px 20px;
-    background: #ff65007a;
+   
     color: #fff;
+           border-width: 2px;
+        border-style: solid;
     border-radius: 5px;
     text-decoration: none;
     position: relative;
@@ -271,9 +295,41 @@ overflow: hidden;
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    transition: .5s;
+transition-duration: 150ms;
 }
 
+.btn:hover {
+   
+    border-width: 0px;
+    color: blue;
+   background: #fff;
+
+}
+.btnn {
+     transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+    padding: 10px 20px;
+    color: blue;
+    background: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    transition-duration: 150ms;
+
+}
+.btnn:hover {
+   
+      border-width: 2px;
+        border-style: solid;
+    color: white;
+    background : #ffffff00;
+
+}
 .btn .arrow {
     font-size: 16px;
     animation: down 1s infinite;
@@ -329,6 +385,7 @@ overflow: hidden;
     border-radius: 10px;
 }
 footer {
-    background: #1e1e1e;
-    padding: 10px;
+    padding-top: 50px;
+    background: rgb(17 24 39) ;
+    
 }

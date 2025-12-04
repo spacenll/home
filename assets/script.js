@@ -1,4 +1,4 @@
-
+//script.js
 
 window.addEventListener('popstate', function() {
     const path = location.pathname.replace('/', '');
