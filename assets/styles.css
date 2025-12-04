@@ -57,11 +57,7 @@ p{
     padding-top: 10px;
 }
 
-.btn {
-        transition: .5s;
-    color: white;
-    text-underline-position: under;
-}
+
 .filter-btn {
    font-family: Alexandria;
     background: #121212;
@@ -121,18 +117,20 @@ section{
 
 .social-icons .icon {
     text-decoration: none;
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    background-color: #fff;
     padding: 15px;
     margin: 5px;
-border-radius: 25px;
+border-radius: 25px 20px 20px;
     font-size: 18px;
     transition: background-color 0.3s, transform 0.3s;
+    width: 20px;
+    height: 20px;
 }
 
 .social-icons .icon:hover {
     background-color: #ffffff;
-    color: #6e45e2;
+    color: #f16724;
     transform: scale(1.1);
 }
 
@@ -259,16 +257,34 @@ overflow: hidden;
     50% { transform: translateY(-60px) translateX(25px); opacity: 1; }
     100% { transform: translateY(0) translateX(0); opacity: 0.7; }
 }
-}
+
 
 .btn {
     padding: 10px 20px;
-    background: #ff6500;
+    background: #ff65007a;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: .5s;
 }
 
+.btn .arrow {
+    font-size: 16px;
+    animation: down 1s infinite;
+}
+
+/* حركة السهم */
+@keyframes down {
+    0% { transform: translateY(-3px); }
+    50% { transform: translateY(3px); }
+    100% { transform: translateY(-3px); }
+}
 .btn2 {
      padding: 5px 5px;
     background: #868480;

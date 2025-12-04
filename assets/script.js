@@ -171,19 +171,39 @@ $(document).ready(function () {
 
     let assets = {
         "websites": [
-            { type: "image", src: "assets/2/webpage_design (1).jpg", link: "https://marktech-agency.com/" },
-            { type: "image", src: "assets/2/webpage_design (2).jpg", link: "https://topmedclinics.com/" },
-            { type: "image", src: "assets/2/webpage_design (3).jpg", link: "https://spacenll.site/shop" },
-            { type: "image", src: "assets/2/webpage_design (4).jpg", link: "https://modernbuildings.site/" },
-            { type: "image", src: "assets/2/webpage_design (5).jpg", link: "https://emaar-gulf-global.com/" }
+            { type: "image", src: "assets/2/webpage_design (1).jpg", alt: "معاينة تصميم صفحة ويب لموقع شركة مارك تك", link: "https://marktech-agency.com/"  },
+          {
+  type: "image",
+  src: "assets/2/webpage_design (2).jpg",
+  link: "https://topmedclinics.com/",
+  alt: "تصميم موقع TopMed Clinics الطبي"
+},
+{
+  type: "image",
+  src: "assets/2/webpage_design (3).jpg",
+  link: "https://spacenll.site/shop",
+  alt: "تصميم متجر SpaceNLL الإلكتروني"
+},
+{
+  type: "image",
+  src: "assets/2/webpage_design (4).jpg",
+  link: "https://modernbuildings.site/",
+  alt: "تصميم موقع Modern Buildings الإنشائي"
+},
+{
+  type: "image",
+  src: "assets/2/webpage_design (5).jpg",
+  link: "https://emaar-gulf-global.com/",
+  alt: "تصميم موقع Emaar Gulf Global العقاري"
+}
         ],
     "cups": [
-    { "type": "image", "src": "assets/3/1 (1).jpg" },
-    { "type": "image", "src": "assets/3/1 (2).jpg" },
-    { "type": "image", "src": "assets/3/1 (3).jpg" },
-    { "type": "image", "src": "assets/3/1 (4).jpg" },
-    { "type": "image", "src": "assets/3/1 (5).jpg" },
-    { "type": "image", "src": "assets/3/1 (7).jpg" }
+    { "type": "image", "src": "assets/3/1 (1).jpg", alt: "تصميم احترافي لكوب لقمة كافيه" },
+    { "type": "image", "src": "assets/3/1 (2).jpg" , alt: "تصميم احترافي لكوب جوفا كافيه"  },
+    { "type": "image", "src": "assets/3/1 (3).jpg" , alt: "تصميم احترافي لكوب جوفا كافيه" },
+    { "type": "image", "src": "assets/3/1 (4).jpg" , alt: "تصميم احترافي لكوب جوفا كافيه" },
+    { "type": "image", "src": "assets/3/1 (5).jpg" , alt: "تصميم احترافي لكوب كرك البنز" },
+    { "type": "image", "src": "assets/3/1 (7).jpg" , alt: "تصميم احترافي لكوب ايكون كافيه" }
 ],
         
             "boxes": [
@@ -276,14 +296,14 @@ $(document).ready(function () {
                     element = `
                         <div class="gallery-item">
                             <a href="${item.link}" target="_blank">
-                                <img src="${item.src}" alt="">
+                                <img src="${item.src}" alt="${item.alt}">
                             </a>
                         </div>
                     `;
                 } else {
                     element = `
                         <div class="gallery-item">
-                            <img src="${item.src}" alt="">
+                            <img src="${item.src}" alt="${item.alt}">
                         </div>
                     `;
                 }
