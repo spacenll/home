@@ -208,8 +208,9 @@ nav {
 .menu-toggle {
     display: none;
     font-size: 24px;
-    color: white;
+    color: black;
     cursor: pointer;
+    z-index: 110;
 }
 
 /* جعل القائمة منسدلة على الجوال */
