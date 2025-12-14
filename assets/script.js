@@ -153,7 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 $(document).ready(function () {
     // تحميل جميع الصور والفيديوهات عند تحميل الصفحة
-    loadGallery("logo");
+        let defaultBtn = $(".filter-btn[data-type='corner']");
+    loadGallery("corner");
 
     // عند النقر على زر تصفية
     $(".filter-btn").click(function () {
