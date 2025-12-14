@@ -231,6 +231,7 @@ $(document).ready(function () {
   
 ],
         "ads": [
+             { type: "video", src: "assets/4/videooad.mp4" },
             { type: "video", src: "assets/4/CGI works (1).mp4" },
             { type: "video", src: "assets/4/CGI works (2).mp4" },
             { type: "video", src: "assets/4/motion video (1).mp4" },
