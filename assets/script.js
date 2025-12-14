@@ -167,7 +167,7 @@ $(document).ready(function () {
    function loadGallery(category) {
     $("#gallery").html(""); // تفريغ المحتوى السابق
 
-    let folder = category === "logo" ? "logo" : category;
+    let folder = category === "corner" ? "corner" : category;
 
     let assets = {
         "websites": [
