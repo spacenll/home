@@ -222,6 +222,10 @@ nav {
 
 /* جعل القائمة منسدلة على الجوال */
 @media (max-width: 768px) {
+    .logo img {
+        padding-right: 60px;
+    padding-bottom: 10px;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
