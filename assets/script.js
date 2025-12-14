@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===============================
 $(document).ready(function () {
     // تحميل جميع الصور والفيديوهات عند تحميل الصفحة
-    loadGallery("logo");
+    loadGallery("corner");
 
     // عند النقر على زر تصفية
     $(".filter-btn").click(function () {
