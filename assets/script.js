@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     // دالة تحميل الصور والفيديوهات بناءً على التصنيف
-   function loadGallery(category) {
+  function loadGallery(category) {
        $("#gallery").html(""); // تفريغ المحتوى السابق
 
        let folder = category === "corner" ? "corner" : category;
@@ -338,7 +338,36 @@ $(document).ready(function () {
                type: "video",
                src: "assets/1/logo motion.mp4"
            }]
-       });
+         
+       };
+       if (!assets[folder]) return;
+
+        assets[folder].forEach(item => {
+
+            let html = "";
+
+            if (item.type === "image") {
+                html = `
+                    <div class="gallery-item">
+                        ${item.link ? `<a href="${item.link}" target="_blank">` : ""}
+                        <img src="${item.src}" alt="${item.alt || ""}">
+                        ${item.link ? "</a>" : ""}
+                    </div>
+                `;
+            }
+
+            if (item.type === "video") {
+                html = `
+                    <div class="gallery-item">
+                        <video src="${item.src}" controls></video>
+                    </div>
+                `;
+            }
+
+            $("#gallery").append(html);
+        });
+    }
+});
 // ===============================
 // زر الرجوع للأعلى
 // ===============================
