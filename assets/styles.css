@@ -92,8 +92,6 @@ p{
 }
 
 .gallery-item {
-display: none;
-   
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 8px 0 rgb(0 0 0 / 10%);
@@ -105,11 +103,9 @@ display: none;
 .gallery-item video {
       width: 100%;
     border-radius: 10px;
-    display: block;
+    
 }
-.gallery-item.active {
-    display: block;
-}
+
 .gallery-item:hover {
     transform: scale(1.05);
 }
