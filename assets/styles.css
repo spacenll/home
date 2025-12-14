@@ -96,7 +96,7 @@ p{
     height: 500px;
     overflow: hidden;
     border-radius: 10px;
-    border: 2px solid orange;
+  
     transition: transform 0.3s ease-in-out;
 }
 
@@ -394,3 +394,4 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
