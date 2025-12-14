@@ -25,35 +25,52 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===============================
 $(document).ready(function () {
 
-    let autoSlideInterval = null;
-    let currentIndex = 0;
     let isUserInsideGallery = false;
+    let autoSwitchInterval = null;
 
-    loadGallery("corner");
+    const categories = [
+        "corner",
+        "websites",
+        "cups",
+        "boxes",
+        "interface",
+        "ads"
+    ];
+
+    let currentCategoryIndex = 0;
+
+    loadGallery(categories[currentCategoryIndex]);
+    activateButton(categories[currentCategoryIndex]);
+    startAutoSwitch();
 
     $(".filter-btn").click(function () {
-        $(".filter-btn").removeClass("active");
-        $(this).addClass("active");
-
         let category = $(this).data("category");
+
+        stopAutoSwitch();
+        currentCategoryIndex = categories.indexOf(category);
         loadGallery(category);
+        activateButton(category);
+        startAutoSwitch();
     });
 
     function loadGallery(category) {
-
         $("#gallery").empty();
-        stopAutoSlide();
-        currentIndex = 0;
 
         const assets = {
             websites: [
-                { type: "image", src: "assets/2/webpage_design (1).jpg", link: "https://marktech-agency.com/" },
-                { type: "image", src: "assets/2/webpage_design (2).jpg", link: "https://topmedclinics.com/" },
-                { type: "image", src: "assets/2/webpage_design (3).jpg", link: "https://spacenll.site/shop" }
+                { type: "image", src: "assets/2/webpage_design (1).jpg" },
+                { type: "image", src: "assets/2/webpage_design (2).jpg" }
             ],
             cups: [
                 { type: "image", src: "assets/3/1 (1).jpg" },
                 { type: "image", src: "assets/3/1 (2).jpg" }
+            ],
+            boxes: [
+                { type: "image", src: "assets/5/1.png" },
+                { type: "image", src: "assets/5/2.png" }
+            ],
+            interface: [
+                { type: "image", src: "assets/9/1.jpeg" }
             ],
             ads: [
                 { type: "video", src: "assets/4/videooad.mp4" }
@@ -64,53 +81,53 @@ $(document).ready(function () {
             ]
         };
 
-        const items = assets[category] || [];
-
-        items.forEach((item, index) => {
-
+        (assets[category] || []).forEach(item => {
             let html = "";
 
             if (item.type === "image") {
                 html = `
-                    <div class="gallery-item ${index === 0 ? "active" : ""}">
-                        ${item.link ? `<a href="${item.link}" target="_blank">` : ""}
+                    <div class="gallery-item">
                         <img src="${item.src}">
-                        ${item.link ? "</a>" : ""}
                     </div>
                 `;
             }
 
             if (item.type === "video") {
                 html = `
-                    <div class="gallery-item ${index === 0 ? "active" : ""}">
-                        <video src="${item.src}" muted autoplay loop playsinline></video>
+                    <div class="gallery-item">
+                        <video src="${item.src}" muted autoplay loop></video>
                     </div>
                 `;
             }
 
             $("#gallery").append(html);
         });
-
-        startAutoSlide();
     }
 
-    function startAutoSlide() {
-        stopAutoSlide();
+    function startAutoSwitch() {
+        stopAutoSwitch();
 
-        autoSlideInterval = setInterval(() => {
+        autoSwitchInterval = setInterval(() => {
             if (isUserInsideGallery) return;
 
-            const items = $("#gallery .gallery-item");
-            items.removeClass("active");
-            $(items[currentIndex]).addClass("active");
+            currentCategoryIndex =
+                (currentCategoryIndex + 1) % categories.length;
 
-            currentIndex = (currentIndex + 1) % items.length;
+            const nextCategory = categories[currentCategoryIndex];
+            loadGallery(nextCategory);
+            activateButton(nextCategory);
+
         }, 3000);
     }
 
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = null;
+    function stopAutoSwitch() {
+        clearInterval(autoSwitchInterval);
+        autoSwitchInterval = null;
+    }
+
+    function activateButton(category) {
+        $(".filter-btn").removeClass("active");
+        $(`.filter-btn[data-category="${category}"]`).addClass("active");
     }
 
     const observer = new IntersectionObserver(entries => {
