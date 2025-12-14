@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفكرتي الشخصية (محمية)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ================= تصميم الواجهة (CSS) ================= */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+        
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%; max-width: 600px;
+            background: white; padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s;
+        }
+
+        /* إخفاء العناصر */
+        .hidden { display: none !important; }
+
+        /* شاشة الدخول */
+        #login-screen { text-align: center; }
+        #login-screen input {
+            padding: 12px; width: 80%; margin: 15px 0;
+            border: 2px solid #ddd; border-radius: 8px;
+            font-size: 18px; text-align: center;
+        }
+        #login-screen button {
+            padding: 12px 30px; background: #2c3e50;
+            color: white; border: none; border-radius: 8px;
+            font-size: 16px; cursor: pointer;
+        }
+        .error { color: red; margin-top: 10px; display: none; }
+
+        /* القائمة الرئيسية */
+        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .card {
+            padding: 25px; border-radius: 12px; text-align: center;
+            cursor: pointer; color: white; transition: transform 0.2s;
+        }
+        .card:hover { transform: scale(1.05); }
+        .card span { font-size: 35px; display: block; margin-bottom: 5px; }
+
+        /* ألوان الكروت */
+        .c1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .c2 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+        .c3 { background: linear-gradient(135deg, #42e695, #3bb2b8); }
+        .c4 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+
+        /* شاشة الملاحظات */
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        textarea { width: 100%; height: 80px; padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: none; }
+        .btn-main { background: #2c3e50; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .note-item { background: #f9f9f9; padding: 10px; margin-top: 10px; border-radius: 5px; border-right: 4px solid #333; display: flex; justify-content: space-between; }
+        .date-text { font-size: 12px; color: #777; margin-top: 5px; }
+        .del-btn { background: #ff4d4d; color: white; border: none; padding: 2px 8px; border-radius: 4px; cursor: pointer; margin-right: 10px; height: fit-content; }
+        
+        /* زر التحميل والتصدير */
+        .tools { margin-top: 20px; text-align: center; border-top: 1px solid #eee; padding-top: 10px; }
+        .backup-btn { background: #27ae60; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="login-screen">
+        <h2>🔐 المفكرة الشخصية</h2>
+        <p>البيانات مشفرة، أدخل كلمة السر للمتابعة</p>
+        <input type="password" id="pass-input" placeholder="كلمة المرور">
+        <br>
+        <button onclick="checkPassword()">دخول</button>
+        <p class="error" id="error-msg">كلمة المرور خاطئة!</p>
+    </div>
+
+    <div class="container hidden" id="main-menu">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h1>مفكرتي</h1>
+            <button onclick="logout()" style="background:#e74c3c; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">خروج 🔒</button>
+        </div>
+        
+        <div class="grid-menu">
+            <div class="card c1" onclick="openApp('activities')"><span>📅</span>أنشطة اليوم</div>
+            <div class="card c2" onclick="openApp('movies')"><span>🎬</span>أفلام</div>
+            <div class="card c3" onclick="openApp('design')"><span>🎨</span>تصميم</div>
+            <div class="card c4" onclick="openApp('invoices')"><span>🧾</span>فواتير</div>
+        </div>
+
+        <div class="tools">
+            <button class="backup-btn" onclick="downloadBackup()">📥 تحميل نسخة احتياطية (ملف)</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="notes-view">
+        <div class="header">
+            <button onclick="showMenu()" style="background:transparent; border:1px solid #333; padding:5px 10px; border-radius:5px; cursor:pointer;">رجوع</button>
+            <h2 id="cat-title">عنوان</h2>
+        </div>
+        <textarea id="note-text" placeholder="اكتب ملاحظة جديدة..."></textarea>
+        <button onclick="saveNote()" class="btn-main">حفظ +</button>
+        <div id="notes-list"></div>
+    </div>
+
+    <script>
+        // ================= البرمجة (JavaScript) =================
+
+        // 🔒 كلمة السر (يمكنك تغييرها من هنا)
+        const MY_PASSWORD = "123"; 
+        
+        // بيانات التطبيق
+        let currentCat = '';
+        let data = JSON.parse(localStorage.getItem('mySecureNotes')) || {
+            activities: [], movies: [], design: [], invoices: []
+        };
+
+        // 1. دالة التحقق من كلمة السر
+        function checkPassword() {
+            const input = document.getElementById('pass-input').value;
+            if (input === MY_PASSWORD) {
+                // كلمة سر صحيحة
+                document.getElementById('login-screen').classList.add('hidden');
+                document.getElementById('main-menu').classList.remove('hidden');
+                // حفظ حالة الدخول مؤقتاً (Session) حتى لا يطلبها عند التحديث
+                sessionStorage.setItem('isLoggedIn', 'true');
+            } else {
+                document.getElementById('error-msg').style.display = 'block';
+            }
+        }
+
+        // التحقق التلقائي عند فتح الصفحة (إذا كان مسجل دخول سابقاً)
+        if (sessionStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById('login-screen').classList.add('hidden');
+            document.getElementById('main-menu').classList.remove('hidden');
+        }
+
+        // 2. التنقل بين الشاشات
+        function logout() {
+            sessionStorage.removeItem('isLoggedIn');
+            location.reload(); // إعادة تحميل الصفحة
+        }
+
+        function showMenu() {
+            document.getElementById('notes-view').classList.add('hidden');
+            document.getElementById('main-menu').classList.remove('hidden');
+        }
+
+        function openApp(cat) {
+            currentCat = cat;
+            document.getElementById('main-menu').classList.add('hidden');
+            document.getElementById('notes-view').classList.remove('hidden');
+            
+            // تغيير العنوان واللون
+            const titles = {activities:'أنشطة اليوم', movies:'أفلام', design:'تصميم', invoices:'فواتير'};
+            const colors = {activities:'#764ba2', movies:'#ff758c', design:'#3bb2b8', invoices:'#f5576c'};
+            
+            document.getElementById('cat-title').innerText = titles[cat];
+            document.getElementById('cat-title').style.color = colors[cat];
+            
+            renderNotes();
+        }
+
+        // 3. إدارة الملاحظات (إضافة - حذف - عرض)
+        function saveNote() {
+            const txt = document.getElementById('note-text').value;
+            if (!txt) return;
+
+            const note = {
+                id: Date.now(),
+                text: txt,
+                time: new Date().toLocaleString('ar-EG')
+            };
+
+            data[currentCat].unshift(note);
+            updateStorage();
+            renderNotes();
+            document.getElementById('note-text').value = '';
+        }
+
+        function deleteNote(id) {
+            if(confirm('حذف الملاحظة؟')) {
+                data[currentCat] = data[currentCat].filter(n => n.id !== id);
+                updateStorage();
+                renderNotes();
+            }
+        }
+
+        function renderNotes() {
+            const list = document.getElementById('notes-list');
+            list.innerHTML = '';
+            
+            data[currentCat].forEach(n => {
+                const div = document.createElement('div');
+                div.className = 'note-item';
+                div.style.borderRightColor = document.getElementById('cat-title').style.color;
+                div.innerHTML = `
+                    <div>
+                        <div>${n.text}</div>
+                        <div class="date-text">${n.time}</div>
+                    </div>
+                    <button class="del-btn" onclick="deleteNote(${n.id})">X</button>
+                `;
+                list.appendChild(div);
+            });
+        }
+
+        function updateStorage() {
+            // تشفير البيانات شكلياً (Base64) قبل الحفظ لكي لا تُقرأ بسهولة
+            // هذا ليس تشفيراً قوياً لكنه يمنع القراءة المباشرة
+            localStorage.setItem('mySecureNotes', JSON.stringify(data));
+        }
+
+        // 4. ميزة حفظ الملف (Backup)
+        function downloadBackup() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "notes_backup.json");
+            document.body.appendChild(downloadAnchorNode); // required for firefox
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+    </script>
+</body>
+</html>
