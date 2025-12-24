@@ -1,6 +1,6 @@
 /*style.css*/
 body {
-    font-family: Lateef;
+    font-family: "Readex Pro", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f7f7f8;
@@ -60,7 +60,7 @@ p{
 
 
 .filter-btn {
-  font-family: Lateef;
+  font-family: "Readex Pro", sans-serif;
     box-shadow: 0 5px 8px 0 rgb(0 0 0 / 10%);
     padding: 10px 20px;
     margin: 5px;
@@ -394,5 +394,6 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
