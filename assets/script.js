@@ -133,6 +133,7 @@ $(document).ready(function () {
          
         ],
         "logo": [
+            { type: "image", src: "assets/7/شعار_ثمرة_بن.webp" },
             { type: "image", src: "assets/7/1 (1).jpg" },
             { type: "image", src: "assets/7/1 (2).jpg" },
             { type: "image", src: "assets/7/1 (1).png" },
