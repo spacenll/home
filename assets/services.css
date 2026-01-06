@@ -6,21 +6,22 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  z-index: 999;
+  z-index: 9999;
 }
 
 /* الرسالة */
 .whatsapp-msg {
   background: #3c57eb;
+  color: #fff;
   padding: 8px 14px;
-  border-radius: 20px;
+  border-radius: 18px;
   font-size: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  white-space: nowrap;
   transform: scale(0);
-  animation: showMsg 0.4s ease forwards;
+  animation: msgIn 0.4s ease forwards;
 }
 
-/* زر الواتساب */
+/* زر واتساب */
 .whatsapp-btn {
   width: 56px;
   height: 56px;
@@ -30,7 +31,7 @@
   align-items: center;
   justify-content: center;
   transform: scale(0);
-  animation: showBtn 0.4s ease forwards;
+  animation: btnIn 0.4s ease forwards;
   animation-delay: 0.5s;
 }
 
@@ -40,13 +41,14 @@
 }
 
 /* Animations */
-@keyframes showMsg {
+@keyframes msgIn {
   to { transform: scale(1); }
 }
 
-@keyframes showBtn {
+@keyframes btnIn {
   to { transform: scale(1); }
 }
+
 .services-section {
   padding: 50px 50px;
  
@@ -175,6 +177,7 @@
     padding: 14px;
   }
 }
+
 
 
 
