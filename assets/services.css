@@ -40,6 +40,7 @@
 
 .service-card:hover {
   transform: translateY(-6px);
+    border: 5px solid royalblue;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
@@ -127,3 +128,4 @@
     padding: 14px;
   }
 }
+
