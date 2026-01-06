@@ -70,6 +70,7 @@ $(document).ready(function () {
 }
         ],
     "cups": [
+          { type: "image", src: "assets/7/شعار_ثمرة_بن.webp" , alt: "تصميم احترافي لكوب ثمرة بن"  },
     { "type": "image", "src": "assets/3/1 (1).jpg", alt: "تصميم احترافي لكوب لقمة كافيه" },
     { "type": "image", "src": "assets/3/1 (2).jpg" , alt: "تصميم احترافي لكوب جوفا كافيه"  },
     { "type": "image", "src": "assets/3/1 (3).jpg" , alt: "تصميم احترافي لكوب جوفا كافيه" },
