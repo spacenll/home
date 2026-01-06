@@ -1,5 +1,52 @@
 /* services.css */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
 
+/* الرسالة */
+.whatsapp-msg {
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(0);
+  animation: showMsg 0.4s ease forwards;
+}
+
+/* زر الواتساب */
+.whatsapp-btn {
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  animation: showBtn 0.4s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.whatsapp-btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Animations */
+@keyframes showMsg {
+  to { transform: scale(1); }
+}
+
+@keyframes showBtn {
+  to { transform: scale(1); }
+}
 .services-section {
   padding: 50px 50px;
  
@@ -128,5 +175,6 @@
     padding: 14px;
   }
 }
+
 
 
