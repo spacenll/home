@@ -8,7 +8,14 @@
   gap: 10px;
   z-index: 9999;
 }
-
+.whatsapp-msg.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.whatsapp-msg.hide {
+  transform: scale(0);
+  opacity: 0;
+}
 /* الرسالة */
 .whatsapp-msg {
   background: #3c57eb;
@@ -177,6 +184,7 @@
     padding: 14px;
   }
 }
+
 
 
 
