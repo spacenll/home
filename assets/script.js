@@ -106,6 +106,8 @@ $(document).ready(function () {
   
 ],
         "ads": [
+           
+             { type: "video", src: "assets/4/شتاء_نوفا_كوكيزه.mp4" },
              { type: "video", src: "assets/4/videooad.mp4" },
             { type: "video", src: "assets/4/CGI works (1).mp4" },
             { type: "video", src: "assets/4/CGI works (2).mp4" },
