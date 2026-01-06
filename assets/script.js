@@ -145,6 +145,8 @@ $(document).ready(function () {
             { type: "image", src: "assets/7/تصماميم لوحات ترويجية.jpg" }
         ],
         "publications": [
+            
+               { "type": "image", "src": "assets/10/collage63.jpg" },
          { "type": "image", "src": "assets/10/1 (1).jpg" },
     { "type": "image", "src": "assets/10/1 (2).jpg" },
     { "type": "image", "src": "assets/10/1 (3).jpg" },
