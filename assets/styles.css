@@ -11,6 +11,9 @@ html {
     scroll-behavior: smooth;
      direction:rtl;
 }
+a {
+  text-decoration: none;
+}
 /* تأثير Fade-in لجميع الصور تلقائيًا */
 img {
     opacity: 0;
@@ -394,6 +397,7 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
 
