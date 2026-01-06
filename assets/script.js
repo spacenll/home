@@ -8,13 +8,19 @@ window.addEventListener('popstate', function () {
     }
 });
 
+
 // ===============================
 // قائمة الموبايل
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
-
+ const msg = document.getElementById("waMsg");
+      msg.classList.add("show");
+     setTimeout(() => {
+    msg.classList.remove("show");
+    msg.classList.add("hide");
+  }, 4000);
     menuToggle.addEventListener("click", function () {
         navLinks.classList.toggle("nav-active");
     });
