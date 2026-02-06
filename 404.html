@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إعادة التوجيه...</title>
-    <script>
-        (function() {
-            var redirectTo = window.location.pathname;
-            if (redirectTo && redirectTo !== "/" && !redirectTo.startsWith("#")) {
-                window.location.replace("/#" + redirectTo.substring(1)); // إزالة `/` من البداية
-            } else {
-                window.location.replace("/");
-            }
-        })();
-    </script>
+<script>
+    (function() {
+        // الحصول على المسار: /home/anything
+        var path = window.location.pathname; 
+        var parts = path.split('/').filter(Boolean); 
+
+        // البحث عن مكان كلمة "home" في الرابط
+        var homeIndex = parts.indexOf('home');
+
+        // إذا وجدت كلمة home وكان بعدها أي كلمة أخرى (مهما كانت)
+        if (homeIndex !== -1 && parts[homeIndex + 1]) {
+            var slug = parts[homeIndex + 1]; // هذه هي الكلمة المتغيرة (services, post, pos...)
+            
+            // بناء الرابط الجديد: domain.com/home/#slug
+            var newUrl = window.location.origin + "/home/#" + slug;
+            
+            window.location.replace(newUrl);
+        } 
+        // إذا كان الرابط هو home فقط
+        else if (homeIndex !== -1) {
+            window.location.replace(window.location.origin + "/home/");
+        }
+        else {
+            window.location.replace("/");
+        }
+    })();
+</script>
 </head>
 <body>
     <h1>جارٍ إعادة التوجيه...</h1>
