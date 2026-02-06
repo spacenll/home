@@ -1,13 +1,19 @@
 // ===============================
 // التنقل حسب الـ URL
 // ===============================
-window.addEventListener('popstate', function () {
-    const path = location.pathname.replace('/', '');
-    if (path) {
-        document.getElementById(path)?.scrollIntoView({ behavior: 'smooth' });
-    }
-});
+(function() {
+    const path = window.location.pathname; // يجلب المسار مثل /home/services
+    const parts = path.split('/').filter(Boolean); // يحوله لمصفوفة ["home", "services"]
 
+    // نتأكد أن الرابط يحتوي على "home" وبعده كلمة أخرى (مثل services)
+    if (parts.length >= 2 && parts[0] === 'home') {
+        const section = parts[1]; // تأخذ كلمة services
+        const newUrl = `${window.location.origin}/home/#${section}`;
+        
+        // تنفيذ التحويل فوراً
+        window.location.replace(newUrl);
+    }
+})();
 
 // ===============================
 // قائمة الموبايل
