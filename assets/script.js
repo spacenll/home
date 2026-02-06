@@ -2,16 +2,22 @@
 // التنقل حسب الـ URL
 // ===============================
 (function() {
-    const path = window.location.pathname; // يجلب المسار مثل /home/services
-    const parts = path.split('/').filter(Boolean); // يحوله لمصفوفة ["home", "services"]
+    // الحصول على المسار الحالي وتمريره للمصفوفة
+    const path = window.location.pathname; 
+    const parts = path.split('/').filter(Boolean); 
 
-    // نتأكد أن الرابط يحتوي على "home" وبعده كلمة أخرى (مثل services)
-    if (parts.length >= 2 && parts[0] === 'home') {
-        const section = parts[1]; // تأخذ كلمة services
-        const newUrl = `${window.location.origin}/home/#${section}`;
-        
-        // تنفيذ التحويل فوراً
-        window.location.replace(newUrl);
+    // إذا كان الرابط يحتوي على "home" وجزء إضافي بعده
+    if (parts.length >= 2 && parts.includes('home')) {
+        // نأخذ الكلمة التي تأتي بعد home مباشرة
+        const homeIndex = parts.indexOf('home');
+        const section = parts[homeIndex + 1];
+
+        if (section) {
+            const newUrl = `${window.location.origin}/home/#${section}`;
+            
+            // تحويل المستخدم للرابط الجديد مع الـ Hash
+            window.location.replace(newUrl);
+        }
     }
 })();
 
