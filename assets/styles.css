@@ -193,7 +193,7 @@ nav {
        transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 .nav-links a:hover{
-    color: royalblue;
+    color: #fed43b;
  
       font-size: 18px;
 }
@@ -309,14 +309,14 @@ transition-duration: 150ms;
 .btn:hover {
    
     border-width: 0px;
-    color: blue;
+    color: #fed43b;
    background: #fff;
 
 }
 .btnn {
      transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     padding: 10px 20px;
-    color: blue;
+    color: #fed43b;
     background: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -397,6 +397,7 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
 
