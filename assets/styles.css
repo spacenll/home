@@ -255,7 +255,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 90vh;
-background: linear-gradient(60deg, #7c3aed, #2563eb);
+background: linear-gradient(60deg, #fed43b, #a5784d);
 
 background-size: 100% 300%; /* طول أكبر من العرض للتحرك عمودياً */
 animation: gradientMove 12s linear infinite;
@@ -397,6 +397,7 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
 
