@@ -292,7 +292,7 @@ overflow: hidden;
         transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     padding: 10px 20px;
    
-    color: #fff;
+    color: #7b4f22;
            border-width: 2px;
         border-style: solid;
     border-radius: 5px;
@@ -397,6 +397,7 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
 
