@@ -18,13 +18,13 @@
             var slug = parts[homeIndex + 1]; // هذه هي الكلمة المتغيرة (services, post, pos...)
             
             // بناء الرابط الجديد: domain.com/home/#slug
-            var newUrl = window.location.origin + "/home/#" + slug;
+            var newUrl = window.location.origin + "/#" + slug;
             
             window.location.replace(newUrl);
         } 
         // إذا كان الرابط هو home فقط
         else if (homeIndex !== -1) {
-            window.location.replace(window.location.origin + "/home/");
+            window.location.replace(window.location.origin );
         }
         else {
             window.location.replace("/");
