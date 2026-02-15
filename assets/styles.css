@@ -38,7 +38,7 @@ p{
 .back-to-top {
     position: fixed;
     display: none;
-    background: #2563eb;
+    background: #fed43b;
     color: #fff;
     width: 44px;
     height: 44px;
@@ -77,12 +77,12 @@ p{
 }
 
 .filter-btn.active {
-        background-color: #2563eb;
+        background-color: #fed43b;
    color: white;
 }
 .filter-btn:hover{
      font-size: 18px;
-     background: #2563eb;
+     background: #fed43b;
     color: white;
 }
 /* المعرض */
@@ -141,7 +141,7 @@ border-radius: 25px 20px 20px;
 
 .social-icons .icon:hover {
    
-    color: #2563eb;
+    color: #fed43b;
     transform: scale(1.05);
 }
 
@@ -317,7 +317,7 @@ transition-duration: 150ms;
      transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     padding: 10px 20px;
     color: #fed43b;
-    background: #fff;
+    background: #7b4f22;
     border-radius: 5px;
     text-decoration: none;
     position: relative;
@@ -397,6 +397,7 @@ footer {
     background: rgb(17 24 39) ;
     
 }
+
 
 
 
