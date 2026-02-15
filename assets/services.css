@@ -1,33 +1,54 @@
 /* services.css */
 .whatsapp-float {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   left: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
   z-index: 9999;
 }
-.whatsapp-msg.show {
-  transform: scale(1);
-  opacity: 1;
-}
-.whatsapp-msg.hide {
-  transform: scale(0);
-  opacity: 0;
-}
-/* الرسالة */
 .whatsapp-msg {
-  background: #3c57eb;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 18px;
-  font-size: 14px;
-  white-space: nowrap;
-  transform: scale(0);
-  animation: msgIn 0.4s ease forwards;
+    /* التنسيق البصري */
+    background: #FFD700;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 12px 12px 12px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #000;
+    position: absolute;
+    left: 60px;
+    white-space: nowrap;
+
+    /* الحالة الابتدائية */
+    opacity: 0;
+    transform: scale(0);
+    
+    /* تشغيل الأنيميشن */
+    /* forwards: ضرورية ليبقى الحجم 1 بعد الانتهاء */
+    animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 1s; 
+    
+    /* نقطة الانطلاق من اليمين */
+    transform-origin: right center;
 }
 
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.whatsapp-msg.fade-out {
+   opacity: 0 !important;
+    transform: scale(0) !important;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* سرعة الاختفاء */
+}
 /* زر واتساب */
 .whatsapp-btn {
   width: 56px;
@@ -59,8 +80,8 @@
 .services-section {
   padding: 50px 50px;
  
-  background: #f7f7f8;
-  color: #222;
+  background: #181818;
+      color: #fff;
 }
 
 .section-title {
@@ -83,21 +104,25 @@
 
 /* البطاقة */
 .service-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform .18s ease, box-shadow .18s ease;
+background: #1e1e1e; /* رمادي غامق جداً ليكسر حدة الخلفية السوداء */
+    border: 3px solid #000; /* إطار أسود صلب ليتماشى مع رسمة البكسل */
+    border-radius: 0px; /* إزالة الانحناء ليتوافق مع هوية شجرة المعلومات */
+    padding: 24px;
+    
+    /* ظل صلب وواضح يعطي عمق (3D) بدلاً من الظل الناعم */
+    box-shadow: 8px 8px 0px 0px rgba(255, 215, 0, 0.2); /* ظل بلون أصفر خفيف */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
   
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-   
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px 0px rgba(255, 215, 0, 0.8); /* الظل يصبح أوضح عند الهوفر */
+    border-color: #FFD700; /* تغيير لون الإطار للأصفر عند التركيز */
 }
 
 /* صف السعر والرمز */
@@ -111,29 +136,58 @@
     order: 1;
     font-size: 30px;
   font-weight: 800;
-  color: #0f172a;
+  color: #FFD700;
   line-height: 1;
 }
 .price1 {
     order: 1;
     font-size: 30px;
   font-weight: 800;
-  color: green;
+  color: #88bf88;
   line-height: 1;
 }
 
 .currency {
     order: 2;
 }
-
-
-
+/* تنسيق قسم العملة والأيقونة */
 .currency svg {
-  width: 28px;
-  height: 28px;
-  opacity: 0.8;
+    width: 40px; /* تحكم في الحجم المناسب لبطاقتك */
+    height: auto;
+    
+    /* سحر الـ Stroke هنا */
+    fill: none; /* إزالة اللون الداخلي */
+    stroke: #FFD700; /* اللون الأصفر من هوية شجرة المعلومات */
+    stroke-width: 1.5px; /* سمك الخط */
+    
+    /* لجعل الزوايا متناسقة مع أسلوب البكسل */
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    
+    transition: all 0.3s ease-in-out;
 }
 
+/* تأثير عند تمرير الماوس على البطاقة */
+.service-card:hover .currency svg {
+    stroke: #ffffff; /* يتحول للأبيض عند الهوفر */
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); /* توهج أصفر خفيف */
+    transform: scale(1.1);
+}
+
+/* تنسيق إضافي لترتيب السعر والعملة */
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.price {
+    font-family: "Readex Pro", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+}
 /* عنوان الخدمة والوصف */
 .service-title {
   margin: 10px 0 6px;
@@ -144,7 +198,7 @@
 .service-desc {
   margin: 0;
   font-size: 14px;
-  color: #475569;
+  color: #c7c7c6;
   opacity: 0.95;
   line-height: 1.45;
   margin-bottom: 14px;

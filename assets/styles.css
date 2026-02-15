@@ -2,9 +2,9 @@
 body {
     font-family: "Readex Pro", sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f7f7f8;
-    color: #fff ;
+padding: 0;
+background-color: #181818;
+    color: #000 ;
     text-align: center;
 }
 html {
@@ -13,6 +13,7 @@ html {
 }
 a {
   text-decoration: none;
+    color: #ffd700;
 }
 /* تأثير Fade-in لجميع الصور تلقائيًا */
 img {
@@ -28,6 +29,31 @@ img {
         transform: translateY(0);
     }
 }
+h1 {
+    color: #ffffff;
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 20px;
+    /* لمسة بسيطة لتجعل الخط يتنفس */
+    letter-spacing: -0.5px; 
+}
+
+h2 {
+    color: #FFD700; /* اللون الأصفر من شعارك */
+    font-family: "Readex Pro", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+h3 {
+       margin: 0;
+    font-size: 14px;
+    color: #c7c7c6;
+    opacity: 0.95;
+    font-weight: lighter;
+    line-height: 1.45;
+    margin-bottom: 14px;
+}
 
 p{
     padding-bottom: 20px;
@@ -38,19 +64,30 @@ p{
 .back-to-top {
     position: fixed;
     display: none;
-    background: #fed43b;
-    color: #fff;
     width: 44px;
     height: 44px;
     text-align: center;
-    border-radius: 50px;
-    line-height: 1;
+   padding: 12px 12px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 4px solid #000;
+    border-radius: 0px;
+    background: #FFD700;
+    color: #000;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    transition: all 0.1s ease-in-out;
+  
     font-size: 22px;
     right: 15px;
     bottom: 15px;
     transition: background 0.5s;
     z-index: 9;
+    
 }
+
 
 .back-to-top:hover {
     color: #fff;
@@ -64,26 +101,36 @@ p{
 
 .filter-btn {
   font-family: "Readex Pro", sans-serif;
-    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 10%);
-    padding: 10px 20px;
-    margin: 5px;
-    border: 0px;
-    background: white;
+    padding: 12px 24px;
+    margin: 10px;
     cursor: pointer;
     font-size: 16px;
-    color: black;
-    border-radius: 50px;
-      transition: font-size 0.2s ease-in-out , background 0.2s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* لمسة البكسل: إزالة الحواف الدائرية واستخدام إطار سميك */
+    border: 4px solid #000; 
+    border-radius: 0px; 
+    
+    /* اللون الأصفر المستوحى من شاشة الكمبيوتر في تصميمك */
+    background: #FFD700; 
+    color: #000;
+    
+    /* ظل "صلب" يعطي إيحاء العمق في ألعاب البكسل */
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    
+    transition: all 0.1s ease-in-out;
+    position: relative;
 }
 
 .filter-btn.active {
-        background-color: #fed43b;
-   color: white;
+      transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
 }
 .filter-btn:hover{
-     font-size: 18px;
-     background: #fed43b;
-    color: white;
+   background: white;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
 }
 /* المعرض */
 .gallery-container {
@@ -129,7 +176,7 @@ section{
 
 .social-icons .icon {
     text-decoration: none;
-    color: #fff;
+    color: #181818;
     padding: 15px;
     margin: 5px;
 border-radius: 25px 20px 20px;
@@ -141,7 +188,7 @@ border-radius: 25px 20px 20px;
 
 .social-icons .icon:hover {
    
-    color: #fed43b;
+    color: #fff;
     transform: scale(1.05);
 }
 
@@ -152,26 +199,29 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 15px 20px;
-    background: #fff;
+  
+    font-weight: bolder;
     position: fixed;
         width: -webkit-fill-available;
     top: 0;
     left: 0;
     z-index: 1000;
+        border: 4px solid #000;
+    border-radius: 0px;
+    background: #FFD700;
+    color: #000;
 }
 
 .logo {
-    font-size: 22px;
     font-weight: bold;
     color: #fff;
     position: fixed;
-    padding: 0 0 0 30px;
-    display: flex;
-    margin: 10px 0 0 0;
+    display: contents;
+
     color: white;
 }
 .logo img {
-  max-width: 10%;
+  max-width: 100%;
     height: auto; /* للحفاظ على النسبة */
  
 }
@@ -187,13 +237,13 @@ nav {
 }
 
 .nav-links a {
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+    color: #000;
     text-decoration: none;
     font-size: 16px;
        transition: font-size 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 .nav-links a:hover{
-    color: #fed43b;
+    color: #fff;
  
       font-size: 18px;
 }
@@ -222,29 +272,72 @@ nav {
         padding-right: 60px;
         padding-bottom: 10px;
     }
+
     .nav-links {
-        display: none;
+        display: none; /* سيبقى كما هو ليتم تبديله بـ nav-active */
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 80px; /* تأكد أن القيمة مناسبة لطول الهيدر */
         right: 0;
-        background: #1e1e1e;
+        background: #FFD700;
         width: 100%;
         text-align: right;
         padding: 10px 0;
+        z-index: 1000;
+        /* إضافة الحدود السوداء لتناسب ستايلك */
+        border-bottom: 4px solid #000;
     }
 
     .nav-links li {
-        padding: 10px;
+        padding: 15px 20px;
+        opacity: 0; /* للبدء بعملية التحريك */
     }
 
     .menu-toggle {
-                display: flex;
+        display: flex;
         margin-left: auto;
+        cursor: pointer;
     }
 
+    /* الكلاس النشط عند الضغط */
     .nav-active {
         display: flex;
+        animation: navSlideIn 0.3s ease forwards;
+    }
+
+    /* أنيميشن تحريك الروابط بالتدريج */
+    .nav-active li {
+        animation: linkFadeIn 0.4s ease forwards;
+    }
+
+    /* تحديد تأخير لكل رابط ليعطي تأثير تتابعي */
+    .nav-active li:nth-child(1) { animation-delay: 0.1s; }
+    .nav-active li:nth-child(2) { animation-delay: 0.2s; }
+    .nav-active li:nth-child(3) { animation-delay: 0.3s; }
+    .nav-active li:nth-child(4) { animation-delay: 0.4s; }
+     .nav-active li:nth-child(5) { animation-delay: 0.5s; }
+
+    /* تعريف الأنيميشن */
+    @keyframes navSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes linkFadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }
 
@@ -255,7 +348,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 height: 90vh;
-background: linear-gradient(60deg, #fed43b, #a5784d);
+background: linear-gradient(60deg, #2C2C2C, #1A1A1D);
 
 background-size: 100% 300%; /* طول أكبر من العرض للتحرك عمودياً */
 animation: gradientMove 12s linear infinite;
@@ -274,7 +367,7 @@ overflow: hidden;
     position: absolute;
     width: 10px;
     height: 10px;
-    background: rgba(255, 140, 0, 0.7);
+    background: #ffd700;
     border-radius: 50%;
     filter: blur(1px);
     animation: floatParticle linear infinite;
@@ -292,10 +385,10 @@ overflow: hidden;
         transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     padding: 10px 20px;
    
-    color: #000000;
+    color: #FFD700;
            border-width: 2px;
         border-style: solid;
-    border-radius: 5px;
+   
     text-decoration: none;
     position: relative;
     font-size: 18px;
@@ -309,7 +402,7 @@ transition-duration: 150ms;
 .btn:hover {
    
     border-width: 0px;
-    color: #fed43b;
+    color: #32CD32;
    background: #fff;
 
 }
@@ -394,7 +487,7 @@ transition-duration: 150ms;
 }
 footer {
     padding-top: 50px;
-    background: rgb(17 24 39) ;
+    background: #ffd700 ;
     
 }
 

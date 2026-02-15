@@ -20,7 +20,24 @@
         }
     }
 })();
+const whatsappMsg = document.querySelector('.whatsapp-msg');
 
+    // 1. ظهور انسيابي بعد ثانية من تحميل الصفحة
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            whatsappMsg.classList.add('active');
+        }, 1000);
+    });
+
+    // 2. اختفاء انسيابي عند السكرول
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            whatsappMsg.classList.add('fade-out');
+        } else {
+            // يعود للظهور إذا رجعت لأعلى الصفحة
+            whatsappMsg.classList.remove('fade-out');
+        }
+    });
 // ===============================
 // قائمة الموبايل
 // ===============================
