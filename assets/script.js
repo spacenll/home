@@ -142,6 +142,7 @@ $(document).ready(function () {
 ],
         "ads": [
            
+       { type: "video", src: "assets/4/تصميم%20دعوات%20الكترونية%20بأنواعها.mp4" },
              { type: "video", src: "assets/4/شتاء_نوفا_كوكيزه.mp4" },
              { type: "video", src: "assets/4/videooad.mp4" },
             { type: "video", src: "assets/4/CGI works (1).mp4" },
