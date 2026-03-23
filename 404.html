@@ -1,38 +1,121 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إعادة التوجيه...</title>
-<script>
-    (function() {
-        // الحصول على المسار: /home/anything
-        var path = window.location.pathname; 
-        var parts = path.split('/').filter(Boolean); 
+    <title>404 - فقدنا الاتصال في الفضاء | spacenll.com</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
-        // البحث عن مكان كلمة "home" في الرابط
-        var homeIndex = parts.indexOf('home');
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b0d17;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-        // إذا وجدت كلمة home وكان بعدها أي كلمة أخرى (مهما كانت)
-        if (homeIndex !== -1 && parts[homeIndex + 1]) {
-            var slug = parts[homeIndex + 1]; // هذه هي الكلمة المتغيرة (services, post, pos...)
-            
-            // بناء الرابط الجديد: domain.com/home/#slug
-            var newUrl = window.location.origin + "/#" + slug;
-            
-            window.location.replace(newUrl);
-        } 
-        // إذا كان الرابط هو home فقط
-        else if (homeIndex !== -1) {
-            window.location.replace(window.location.origin );
+        /* تأثير النجوم في الخلفية */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            z-index: -1;
         }
-        else {
-            window.location.replace("/");
+
+        .stars::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow: 10vw 20vh #fff, 30vw 50vh #fff, 70vw 10vh #fff, 90vw 80vh #fff, 40vw 30vh #fff, 60vw 90vh #fff;
+            animation: animateStars 50s linear infinite;
         }
-    })();
-</script>
+
+        @keyframes animateStars {
+            from { transform: translateY(0); }
+            to { transform: translateY(-1000px); }
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error-code {
+            font-size: 150px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff, #4a90e2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .message {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #bdc3c7;
+        }
+
+        .home-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+        }
+
+        .home-btn:hover {
+            background-color: #357abd;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .planet {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff4e50, #f9d423);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: inset -10px -10px 20px rgba(0,0,0,0.5), 0 0 20px rgba(255, 78, 80, 0.3);
+        }
+    </style>
 </head>
 <body>
-    <h1>جارٍ إعادة التوجيه...</h1>
+
+    <div class="stars"></div>
+
+    <div class="container">
+        <div class="planet"></div>
+        <h1 class="error-code">404</h1>
+        <p class="message">عذراً، يبدو أنك تهت في مدار خاطئ!</p>
+        <p style="margin-bottom: 30px; color: #7f8c8d;">الصفحة التي تبحث عنها غير موجودة في نظامنا الشمسي.</p>
+        <a href="https://spacenll.com" class="home-btn">العودة للمحطة الرئيسية</a>
+    </div>
+
 </body>
 </html>
