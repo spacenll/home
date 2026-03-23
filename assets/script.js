@@ -1,25 +1,7 @@
 // ===============================
 // التنقل حسب الـ URL
 // ===============================
-(function() {
-    // الحصول على المسار الحالي وتمريره للمصفوفة
-    const path = window.location.pathname; 
-    const parts = path.split('/').filter(Boolean); 
 
-    // إذا كان الرابط يحتوي على "home" وجزء إضافي بعده
-    if (parts.length >= 2 && parts.includes('home')) {
-        // نأخذ الكلمة التي تأتي بعد home مباشرة
-        const homeIndex = parts.indexOf('home');
-        const section = parts[homeIndex + 1];
-
-        if (section) {
-            const newUrl = `${window.location.origin}/home/#${section}`;
-            
-            // تحويل المستخدم للرابط الجديد مع الـ Hash
-            window.location.replace(newUrl);
-        }
-    }
-})();
 const whatsappMsg = document.querySelector('.whatsapp-msg');
 
     // 1. ظهور انسيابي بعد ثانية من تحميل الصفحة
