@@ -280,9 +280,9 @@ function updateDeliveryOptions() {
     delivery.innerHTML = "";
 
     if (region === "السعادة") {
-        delivery.innerHTML = `<option value="1.5">مندوب - 1.5 ريال</option>`;
+        delivery.innerHTML = `<option value="1">مندوب - 1 ريال</option>`;
     } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
-        delivery.innerHTML = `<option value="2">مندوب - 2 ريال</option>`;
+        delivery.innerHTML = `<option value="1">مندوب - 1 ريال</option>`;
     } else if (region === "مسقط" || region === "اخرى") {
         delivery.innerHTML = `
             <option value="1">نقليات - 1 ريال</option>
