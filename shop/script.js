@@ -379,7 +379,7 @@ function gtag_report_conversion(url) {
          if (result.isConfirmed){
                 const doneurl= '#ok';
                  window.location.href = doneurl;
-        const whatsappLink = `https://wa.me/+96879289653?text=${encodeURIComponent(message)}`;
+        const whatsappLink = `https://api.whatsapp.com/send?phone=96377267075&text=${encodeURIComponent(message)}`;
               const whatsappLink2 = 'thankyou'
         window.open(whatsappLink, '_blank');
           window.location.href= whatsappLink2 ;  
