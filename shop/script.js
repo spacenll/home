@@ -170,7 +170,7 @@ function calculateTotal(includeDelivery = false, deliveryCost = 0) {
     // تطبيق الخصم حسب عدد الأكواب
     let cupsCost = 0;
  
-        cupsCost = totalItems * 2; // السعر العادي
+        cupsCost = totalItems * 1; // السعر العادي
    
 
     const total = includeDelivery ? cupsCost + deliveryCost : cupsCost;
@@ -233,9 +233,9 @@ discountInfo.style.color = 'green';
 cartItems.appendChild(discountInfo);
 
 // عرض التفاصيل الأخرى
-productTotal.textContent = `المجموع الكلي: ${finalTotal.toFixed(2)} ريال`;
+productTotal.textContent = `المجموع الكلي: ${finalTotal.toFixed(1)} ريال`;
 delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
-cartTotal.textContent = `${productsTotal.toFixed(2)} ريال`;
+cartTotal.textContent = `${productsTotal.toFixed(1)} ريال`;
 
 cartModal.classList.add('visible');
 cartBackdrop.classList.add('visible');
