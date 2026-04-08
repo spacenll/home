@@ -12,26 +12,7 @@
 }
 
 
-    .ticker-content {
-      display: inline-block;
-      white-space: nowrap;
-        font-weight: bold;
-        font-size: 18px;
-        
-        border-radius: 20px;
-        color: azure;
-      padding-left: 100%; /* لبدء المحتوى من خارج الشاشة اليسرى */
-      animation: scroll-right 8s linear infinite;
-    }
 
-    @keyframes scroll-right {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0%);
-      }
-    }
 .social-icons .icon {
     text-decoration: none;
     color: #ffffff;
