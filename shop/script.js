@@ -138,25 +138,25 @@ closeCart();
 // الحصول على سعر المنتج
 function getProductPrice(productId) {
     const prices = {
-          121: { name: "Karak #4", price: 2 },
-    120: { name: "Latte #4", price: 2 },
-    119: { name: "Creamy #4", price: 2 },
-    118: { name: "Azura #4", price: 2 },
-    117: { name: "Bronze #1", price: 2 },
-    116: { name: "White #1", price: 2 },
-    115: { name: "Celestial #1", price: 2 },
-    114: { name: "Black #1", price: 2 },
-    113: { name: "Red #1", price: 2 },
-    112: { name: "Rosa #1", price: 2 },
-    109: { name: "Couco #3", price: 2 },
-    108: { name: "White #2", price: 2 },
-    107: { name: "Green #2", price: 2 },
-    106: { name: "Yashma #2", price: 2 },
-    105: { name: "Brown #2", price: 2 },
-    104: { name: "Blue #1", price: 2 },
-    103: { name: "Spiral #1", price: 2 },
-    102: { name: "Turquoise #1", price: 2 },
-    101: { name: "Yellow #1", price: 2 }
+          121: { name: "Karak #4", price: 1 },
+    120: { name: "Latte #4", price: 1 },
+    119: { name: "Creamy #4", price: 1 },
+    118: { name: "Azura #4", price: 1 },
+    117: { name: "Bronze #1", price: 1 },
+    116: { name: "White #1", price: 1 },
+    115: { name: "Celestial #1", price: 1 },
+    114: { name: "Black #1", price: 1 },
+    113: { name: "Red #1", price: 1 },
+    112: { name: "Rosa #1", price: 1 },
+    109: { name: "Couco #3", price: 1 },
+    108: { name: "White #2", price: 1 },
+    107: { name: "Green #2", price: 1 },
+    106: { name: "Yashma #2", price: 1 },
+    105: { name: "Brown #2", price: 1 },
+    104: { name: "Blue #1", price: 1 },
+    103: { name: "Spiral #1", price: 1 },
+    102: { name: "Turquoise #1", price: 1 },
+    101: { name: "Yellow #1", price: 1 }
 
     };
     return prices[productId] || { name: "غير معروف", price: 0 };
@@ -230,7 +230,6 @@ const finalTotal = productsTotal + deliveryCost;
 // عرض معلومات السعر الخاص
 const discountInfo = document.createElement('p');
 discountInfo.style.color = 'green';
-discountInfo.textContent = `تم تطبيق سعر خاص: ${cupsCost.toFixed(2)} ريال`;
 cartItems.appendChild(discountInfo);
 
 // عرض التفاصيل الأخرى
