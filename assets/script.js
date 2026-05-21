@@ -61,7 +61,11 @@ $(document).ready(function () {
 
     let assets = {
         "websites": [
-                  { type: "image", src: "assets/2/lavacaffee.png", alt: "معاينة تصميم صفحة روابط", link: "https://lavacoffee1.github.io/branches/"  },
+                  { type: "image", src: "assets/2/Screenshot 2026-05-21 155431.png", alt: "معاينة تصميم صفحة روابط", link: "*"  },
+            { type: "image", src: "assets/2/1.png", alt: "معاينة تصميم صفحة روابط", link: "*"  },
+                    { type: "image", src: "assets/2/Screenshot 2026-05-21 155359.png", alt: "معاينة تصميم صفحة روابط", link: "*"  },
+                 
+            { type: "image", src: "assets/2/lavacaffee.png", alt: "معاينة تصميم صفحة روابط", link: "https://lavacoffee1.github.io/branches/"  },
             { type: "image", src: "assets/2/webpage_design (1).jpg", alt: "معاينة تصميم صفحة ويب لموقع شركة مارك تك", link: "https://marktech-agency.com/"  },
           {
   type: "image",
