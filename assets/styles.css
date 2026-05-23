@@ -87,7 +87,105 @@ p{
     z-index: 9;
     
 }
+.youtube-section {
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    direction: rtl; /* يدعم الكتابة من اليمين لليسار */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.youtube-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.youtube-icon-wrapper {
+    background-color: #ffe6e6;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube-main-icon {
+    width: 45px;
+    height: 45px;
+    fill: #FF0000; /* لون يوتيوب الرسمي */
+}
+
+.youtube-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.channel-title {
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.channel-description {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.youtube-action {
+    display: flex;
+    align-items: center;
+}
+
+.btn-subscribe {
+    background-color: #FF0000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+}
+
+.btn-subscribe:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 0, 0, 0.3);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+/* التوافق مع الهواتف */
+@media (max-width: 600px) {
+    .youtube-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .youtube-content {
+        min-width: 100%;
+    }
+    .btn-subscribe {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
 .back-to-top:hover {
     color: #fff;
