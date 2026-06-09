@@ -36,6 +36,9 @@
         /* زر خيارات التروس المتقدمة للإكسل */
         .settings-icon-btn { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 20px; cursor: pointer; color: var(--secondary); user-select: none; transition: 0.2s; }
         .settings-icon-btn:hover { transform: translateY(-50%) rotate(45deg); color: #fff; }
+       
+        .settings-icon-btn1 { position: absolute; left: 35px; top: 50%; transform: translateY(-50%); font-size: 20px; cursor: pointer; color: var(--secondary); user-select: none; transition: 0.2s; }
+       
 
         .btnsc {
           display: flex;
@@ -118,7 +121,8 @@
 
     <div id="admin-panel" class="admin-panel">
         <div class="panel-header">
-            <div class="settings-icon-btn" onclick="toggleSectionDirect('advanced-settings-content')" title="خيارات متقدمة">⚙️</div>
+            <div class="settings-icon-btn" onclick="toggleSectionDirect('advanced-settings-content')" title="خيارات متقدمة">≡</div>
+             <div class="settings-icon-btn1" onclick="toggleSectionDirect('advanced-settings-content')" title="اضافة">+</div>
             <img src="logo.png" alt="الشعار" class="panel-logo" onerror="this.style.display='none'">
             <span>الملكية للإستثمار</span>
         </div>
