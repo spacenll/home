@@ -30,21 +30,16 @@
         .toggle-panel-btn { position: absolute; right: 400px; top: 50%; transform: translateY(-50%); background: var(--primary); border: 1px solid var(--secondary); border-right: none; color: var(--secondary); padding: 15px 6px; cursor: pointer; z-index: 2000; border-radius: 4px 0 0 4px; font-size: 11px; transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-weight: bold; }
         .admin-panel.hidden + .toggle-panel-btn { right: 0; }
 
-        .panel-header { background: var(--primary); color: var(--secondary); padding: 15px; font-weight: bold; text-align: center; font-size: 14px; border-bottom: 2px solid var(--secondary); display: flex; flex-direction: row; align-items: center; gap: 8px; position: relative; }
-        .panel-logo { max-height: 50px; width: auto; object-fit: contain; border-radius: 50px; }
-        
-        /* زر خيارات التروس المتقدمة للإكسل */
-        .settings-icon-btn { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 20px; cursor: pointer; color: var(--secondary); user-select: none; transition: 0.2s; }
-        .settings-icon-btn:hover { transform: translateY(-50%) rotate(45deg); color: #fff; }
-
-        .btnsc {
-          display: flex;
-          justify-content: center; 
-          gap: 12px;               
-          width: 100%;             
-          padding-bottom: 10px;
-          box-sizing: border-box;
-        }
+        .panel-header { background: var(--primary); color: var(--secondary); padding: 15px; font-weight: bold; text-align: center; font-size: 14px; border-bottom: 2px solid var(--secondary); display: flex; flex-direction: row; align-items: center; gap: 8px; }
+        .panel-logo { max-height: 50px; width: auto; object-fit: contain;    border-radius: 50px; }
+.btnsc {
+  display: flex;
+  justify-content: center; /* لتوسيط الأزرار في منتصف الصفحة، استخدم space-between أو space-around للتوزيع */
+  gap: 12px;               /* ترك مسافة متساوية بين الأزرار */
+  width: 100%;             /* تأخذ كامل عرض الحاوية الأب */
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
 
         /* القوائم المطوية */
         .collapsible-header { background: var(--gray-bg); color: var(--primary); padding: 14px 15px; font-weight: bold; font-size: 13px; cursor: pointer; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; transition: 0.2s; border-right: 3px solid var(--secondary); }
@@ -60,10 +55,10 @@
         input, select, textarea { width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; background: #fff; color: var(--primary); }
         input:focus, select:focus { border-color: var(--secondary); outline: none; }
         
-        .btn { background: #d4af37; color: var(--primary); border: 1px solid var(--secondary); padding: 11px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-top: 10px; transition: 0.2s; text-align: center; }
-        .btn1 { background: white; color: var(--primary); border: 0px solid var(--secondary); padding: 11px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 18px; margin-top: 10px; transition: 0.2s; }
+         .btn { background: #d4af37; color: var(--primary); border: 1px solid var(--secondary); padding: 11px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 12px; margin-top: 10px; transition: 0.2s; }
+            .btn1 { background: white; color: var(--primary); border: 0px solid var(--secondary); padding: 11px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 18px; margin-top: 10px; transition: 0.2s; }
        
-        .btn:hover { background: var(--primary); color: var(--secondary); }
+         .btn:hover { background: var(--primary); color: var(--secondary); }
         .btn-secondary { background: #fff; color: #555; border: 1px solid #ccc; }
         .btn-secondary:hover { background: #eee; color: #111; }
 
@@ -79,27 +74,21 @@
         .sidebar-body { padding: 15px; overflow-y: auto; flex: 1; font-size: 12px; }
         
         .info-item1 { 
-            height: 50px;            
-            overflow-y: auto;        
-            margin-bottom: 12px; 
-            border-bottom: 1px solid #f5f5f5; 
-            padding-bottom: 8px; 
-        }
-        .info-item { margin-bottom: 12px; border-bottom: 1px solid #f5f5f5; padding-bottom: 8px; }
+    height: 50px;            /* تحديد الارتفاع بـ 20 بكسل */
+    overflow-y: auto;        /* تفعيل السكرول العمودي عند الحاجة */
+    margin-bottom: 12px; 
+    border-bottom: 1px solid #f5f5f5; 
+    padding-bottom: 8px; 
+}
+         .info-item { margin-bottom: 12px; border-bottom: 1px solid #f5f5f5; padding-bottom: 8px; }
         .info-item b { color: var(--primary); display: block; font-size: 11px; margin-bottom: 3px; position: relative; padding-right: 8px; }
         .info-item b::before { content: ''; position: absolute; right: 0; top: 4px; width: 3px; height: 8px; background: var(--secondary); }
         .close-btn { cursor: pointer; font-size: 22px; color: var(--secondary); border: none; background: none; line-height: 1; }
         .status-badge { display: inline-block; padding: 3px 8px; color: #fff; border-radius: 4px; font-size: 10px; font-weight: bold; }
         
-        /* شريط الفلاتر للمناطق المضاف */
-        .filter-container { display: flex; gap: 6px; overflow-x: auto; padding: 10px; background: #fafafa; flex-flow: wrap; border-bottom: 1px solid var(--border-color); white-space: nowrap; scrollbar-width: thin; }
-        .filter-chip { background: #fff; border: 1px solid #ccc; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; cursor: pointer; transition: 0.2s; color: #555; display: inline-flex; align-items: center; gap: 4px; }
-        .filter-chip:hover { border-color: var(--secondary); background: #fffdf5; }
-        .filter-chip.active { background: var(--primary); color: var(--secondary); border-color: var(--secondary); }
-        .filter-chip span { color: inherit; font-size: 10px; opacity: 0.8; }
-
         /* جدول العقارات */
-        .table-container { padding: 5px 10px; overflow-y: auto; flex: 1; }
+        .table-section-title { padding: 14px 15px; font-weight: bold; font-size: 13px; color: var(--primary); border-bottom: 1px solid var(--border-color); background: var(--gray-bg); border-right: 3px solid var(--primary); }
+        .table-container { padding: 10px; overflow-y: auto; flex: 1; }
         table { width: 100%; border-collapse: collapse; text-align: right; font-size: 11px; }
         th, td { padding: 10px 6px; border-bottom: 1px solid #eee; }
         th { background: #fafafa; color: #333; font-weight: bold; cursor: pointer; user-select: none; transition: background 0.2s; }
@@ -118,21 +107,8 @@
 
     <div id="admin-panel" class="admin-panel">
         <div class="panel-header">
-            <div class="settings-icon-btn" onclick="toggleSectionDirect('advanced-settings-content')" title="خيارات متقدمة">⚙️</div>
             <img src="logo.png" alt="الشعار" class="panel-logo" onerror="this.style.display='none'">
             <span>الملكية للإستثمار</span>
-        </div>
-        
-        <div id="advanced-settings-content" style="display: none; padding: 15px; background: #fafafa; border-bottom: 2px solid var(--secondary);">
-            <h4 style="font-size: 11px; margin-bottom: 8px; font-weight: bold;">إدارة قاعدة البيانات (Excel):</h4>
-            <div style="display:flex; gap:8px;">
-                <button type="button" class="btn" style="flex:1; margin-top:0;" onclick="exportToExcel()">تصدير إكسل 📤</button>
-                <label class="btn" style="flex:1; margin-top:0; background:var(--primary); color:var(--secondary);">
-                    استيراد إكسل 📥
-                    <input type="file" id="excel-import-file" accept=".xlsx, .xls" style="display:none;" onchange="importFromExcel(this)">
-                </label>
-            </div>
-            <button type="button" class="btn" style="background:#aa1e1e; color:#fff; border-color:#aa1e1e; width:100%; margin-top:8px;" onclick="clearAllDataSystem()">تفريغ النظام وإعادة جلب البيانات 🗑️</button>
         </div>
         
         <div class="collapsible-header" onclick="toggleSection('add-land-content')">
@@ -143,24 +119,29 @@
         <div id="add-land-content" class="collapsible-content">
             <form id="land-form">
                 <input type="hidden" id="edit-id">
-                <div class="form-row">
-                    <div class="form-group" style="flex:2;">
-                        <label>نوع الارض</label>
-                        <select id="prop-type">
-                            <option value="land">أرض فضاء</option>
-                            <option value="investment">عقار جاهز للاستثمار</option>
-                        </select>
-                    </div>
-                    <div class="form-group" style="flex:2;">
-                        <label>الاستعمال</label>
-                        <select id="region-type">
-                            <option value="sakani">سكني</option>
-                            <option value="sakanitgary">سكني | تجاري</option>
-                            <option value="tgary">تجاري</option>
-                            <option value="zrai">زراعي</option>
-                        </select>
-                    </div>
+                 <div class="form-row">
+                <div lass="form-group" style="flex:2;">
+                    <label>نوع الارض</label>
+                    <select id="prop-type">
+                        <option value="land">أرض فضاء</option>
+                        <option value="investment">عقار جاهز للاستثمار</option>
+                    </select>
+                  
+                    
                 </div>
+                  <div class="form-group" style="flex:2;">
+                    <label>الاستعمال</label>
+                    <select id="region-type">
+                        <option value="sakani">سكني</option>
+                        <option value="sakanitgary">سكني | تجاري</option>
+                         <option value="tgary">تجاري</option>
+                          <option value="zrai">زراعي</option>
+                    </select>
+                  
+                    </div>
+              
+                
+</div>
                 <div class="form-row">
                     <div class="form-group" style="flex:2;">
                         <label>رقم القطعة / العقار (يقبل أرقام وأحرف)</label>
@@ -169,12 +150,13 @@
                     <div class="form-group" style="flex:1;">
                         <label>المربع</label>
                         <select id="plot-square">
-                            <option value="-">-</option>
+                             <option value="-">-</option>
                             <option value="أ">أ</option>
                             <option value="ب">ب</option>
                             <option value="ج">ج</option>
-                            <option value="ل">ل</option>
+                                <option value="ل">ل</option>
                             <option value="هـ">هـ</option>
+
                         </select>
                     </div>
                 </div>
@@ -185,7 +167,7 @@
                         <select id="region-main">
                             <option value="صلالة">صلالة</option>
                             <option value="السعادة">السعادة</option>
-                            <option value="الدهاريز">الدهاريز</option>
+                              <option value="الدهاريز">الدهاريز</option>
                             <option value="عوقد">عوقد</option>
                             <option value="صحلنوت">صحلنوت</option>
                             <option value="مرباط">مرباط</option>
@@ -199,7 +181,7 @@
                             <option value="-">-</option>
                             <option value="الحي_التجاري">الحي التجاري</option>
                             <option value="جنوب">جنوب</option>
-                            <option value="الغرب">الغرب</option>
+                                <option value="الغرب">الغرب</option>
                             <option value="شمال">شمال</option>
                             <option value="الجديدة">الجديدة</option>
                         </select>
@@ -254,9 +236,7 @@
             </form>
         </div>
 
-        <div id="region-filter-bar" class="filter-container">
-            </div>
-
+      
         <div class="table-container">
             <table>
                 <thead>
@@ -268,7 +248,7 @@
                     </tr>
                 </thead>
                 <tbody id="lands-table-body">
-                </tbody>
+                    </tbody>
             </table>
         </div>
     </div>
@@ -284,13 +264,12 @@
                 <button class="close-btn" onclick="toggleSidebar(false)">×</button>
             </div>
             <div class="sidebar-body" id="side-body">
-            </div>
+                </div>
         </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
     <script>
         const googleSatellite = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', { maxZoom: 20 });
@@ -308,7 +287,6 @@
 
         let localProperties = JSON.parse(localStorage.getItem('my_properties')) || [];
         let properties = []; 
-        let selectedRegionFilter = 'الكل'; // الفلتر المختار افتراضياً
         let mapLayersGroup = L.layerGroup().addTo(map);
         const allLandsLayers = [];
         let currentSortKey = '';
@@ -323,6 +301,7 @@
 
         scanKmlFolderAndLoad();
 
+        // التحكم في إخفاء وإظهار اللوحة الجانبية اليمنى
         function toggleAdminPanel() {
             const panel = document.getElementById('admin-panel');
             const btn = document.getElementById('toggle-panel-btn');
@@ -332,7 +311,7 @@
             } else {
                 btn.innerText = '◀';
             }
-            setTimeout(() => { map.invalidateSize(); }, 300); 
+            setTimeout(() => { map.invalidateSize(); }, 300); // تحديث حجم الخريطة لملاءمة المساحة الجديدة
         }
 
         async function scanKmlFolderAndLoad() {
@@ -364,7 +343,6 @@
                                 plotNum: plotNum,
                                 square: 'أ',
                                 regionMain: 'صلالة', 
-                                regionType: 'sakani',
                                 regionSub: 'الجديدة',
                                 area: area,
                                 price: 'غير محدد',
@@ -387,173 +365,39 @@
             updateUI();
         }
 
-        function clearAllDataSystem() {
-            if (confirm("🚨 هل أنت متأكد من رغبتك في تفريغ قاعدة البيانات والذاكرة المحلية بالكامل؟\nسيتم حذف كل التعديلات اليدوية وإعادة قراءة مجلد kmls من جديد فقط.")) {
-                localStorage.removeItem('my_properties'); 
-                localProperties = [];
-                properties = [];
-                selectedRegionFilter = 'الكل';
-                
-                mapLayersGroup.clearLayers();
-                allLandsLayers.length = 0;
-                
-                resetForm();
-                toggleSidebar(false);
-                document.getElementById('advanced-settings-content').style.display = 'none';
-                
-                scanKmlFolderAndLoad();
-                alert("تم تفريغ النظام بنجاح وإعادة جلب ملفات المجلد النظيفة من جديد! ✨");
-            }
-        }
-
-        function toggleSectionDirect(id) {
-            const el = document.getElementById(id);
-            el.style.display = (el.style.display === 'block') ? 'none' : 'block';
-        }
-
-        function exportToExcel() {
-            if (localProperties.length === 0) {
-                alert("لا توجد بيانات مضافة يدوياً لتصديرها حالياً!");
-                return;
-            }
-
-            const formattedData = localProperties.map(p => ({
-                "نوع العقار": p.type === 'land' ? 'أرض فضاء' : 'عقار استثماري',
-                "الاستعمال": p.regionType || 'sakani',
-                "رقم القطعة / العقار": p.plotNum,
-                "المربع": p.square,
-                "المنطقة": p.regionMain,
-                "الجهة / الامتداد": p.regionSub,
-                "المساحة (م²)": parseFloat(p.area),
-                "السعر الفعلي (ر.ع)": parseFloat(p.price) || p.price,
-                "عدد الطوابق": p.floors,
-                "الارتدادات": p.offsets,
-                "اسم المالك": p.ownerName,
-                "رقم المالك": p.ownerPhone,
-                "حالة العرض": p.status
-            }));
-
-            const worksheet = XLSX.utils.json_to_sheet(formattedData);
-            const workbook = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(workbook, worksheet, "العقارات");
-            XLSX.writeFile(workbook, "دليل_العقارات.xlsx");
-        }
-
-        function importFromExcel(input) {
-            const file = input.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: 'array' });
-                const worksheet = workbook.Sheets[workbook.SheetNames[0]];
-                const excelRows = XLSX.utils.sheet_to_json(worksheet);
-                
-                let importedCount = 0;
-
-                excelRows.forEach(row => {
-                    const plotNum = String(row["رقم القطعة / العقار"] || "").trim();
-                    const area = String(row["المساحة (م²)"] || "").trim();
-
-                    if (!plotNum || !area) return; 
-
-                    const propData = {
-                        id: Date.now() + Math.floor(Math.random() * 1000), 
-                        type: row["نوع العقار"] === 'عقار استثماري' ? 'investment' : 'land',
-                        regionType: row["الاستعمال"] || 'sakani',
-                        plotNum: plotNum,
-                        square: row["المربع"] || '-',
-                        regionMain: row["المنطقة"] || 'صلالة',
-                        regionSub: row["الجهة / الامتداد"] || '-',
-                        area: area,
-                        price: String(row["السعر الفعلي (ر.ع)"] || '0'),
-                        floors: row["عدد الطوابق"] || '',
-                        offsets: row["الارتدادات"] || '',
-                        ownerName: row["اسم المالك"] || '',
-                        ownerPhone: row["رقم المالك"] || '',
-                        status: row["حالة الععرض"] || 'ready'
-                    };
-
-                    const isDuplicate = localProperties.some(lp => lp.plotNum === propData.plotNum && lp.area === propData.area);
-                    if (!isDuplicate) {
-                        localProperties.push(propData);
-                        importedCount++;
-                    }
-                });
-
-                if (importedCount > 0) {
-                    localStorage.setItem('my_properties', JSON.stringify(localProperties));
-                    alert(`تم استيراد عدد (${importedCount}) عقار بنجاح!`);
-                    scanKmlFolderAndLoad();
-                } else {
-                    alert("لم يتم استيراد بيانات جديدة؛ قد تكون العناصر مكررة بالفعل.");
-                }
-                input.value = ''; 
-            };
-            reader.readAsArrayBuffer(file);
-        }
-
+        // نظام ترتيب الجدول عند الضغط على العناوين
         function sortTable(key, thElement) {
             if (currentSortKey === key) {
-                isSortAsc = !isSortAsc; 
+                isSortAsc = !isSortAsc; // عكس اتجاه الترتيب
             } else {
                 currentSortKey = key;
                 isSortAsc = true;
             }
 
+            // إزالة كلاسات الترتيب السابقة من جميع العناوين
             document.querySelectorAll('th').forEach(th => {
                 th.classList.remove('sort-asc', 'sort-desc');
             });
 
+            // إضافة الكلاس المناسب للعنوان الحالي
             thElement.classList.add(isSortAsc ? 'sort-asc' : 'sort-desc');
 
             properties.sort((a, b) => {
                 let valA = a[key];
                 let valB = b[key];
 
+                // إذا كان الفرز يعتمد على أرقام (مثل المساحة)
                 if (key === 'area') {
                     return isSortAsc ? parseFloat(valA) - parseFloat(valB) : parseFloat(valB) - parseFloat(valA);
                 }
 
+                // الفرز النصي/الأبجدي للأراضي والبلدان (يتعامل مع الأرقام والنصوص المخلوطة)
                 return isSortAsc 
                     ? String(valA).localeCompare(String(valB), 'ar', {numeric: true}) 
                     : String(valB).localeCompare(String(valA), 'ar', {numeric: true});
             });
 
             updateTable();
-        }
-
-        // دالة بناء وتحديث شريط الفلاتر العلوي مع الأرقام التلقائية
-        function renderFilterBar() {
-            const filterBar = document.getElementById('region-filter-bar');
-            
-            // قائمة كاملة بالمناطق المتاحة في حقل الإدخال
-            const regionsList = ['الكل', 'صلالة', 'السعادة', 'الدهاريز', 'عوقد', 'صحلنوت', 'مرباط', 'مسقط', 'بركاء'];
-            
-            filterBar.innerHTML = '';
-            
-            regionsList.forEach(reg => {
-                // حساب عدد قطع الأراضي التابعة لكل منطقة جغرافية
-                let count = 0;
-                if (reg === 'الكل') {
-                    count = properties.length;
-                } else {
-                    count = properties.filter(p => p.regionMain === reg).length;
-                }
-
-                const chip = document.createElement('div');
-                chip.className = `filter-chip ${selectedRegionFilter === reg ? 'active' : ''}`;
-                chip.innerHTML = `${reg} <span>(${count})</span>`;
-                
-                chip.addEventListener('click', () => {
-                    selectedRegionFilter = reg;
-                    // إعادة تشغيل فرز العرض للجدول والخريطة
-                    updateUI(); 
-                });
-                
-                filterBar.appendChild(chip);
-            });
         }
 
         function toggleSection(id) {
@@ -613,7 +457,6 @@
         document.getElementById('cancel-edit-btn').addEventListener('click', resetForm);
 
         function updateUI() {
-            renderFilterBar(); // تحديث أرقام الفلاتر
             updateTable();
             renderMapLayers();
         }
@@ -621,14 +464,7 @@
         function updateTable() {
             const tbody = document.getElementById('lands-table-body');
             tbody.innerHTML = '';
-            
-            // فلترة القائمة بناءً على التبويب النشط
-            const filteredProperties = properties.filter(p => {
-                if (selectedRegionFilter === 'الكل') return true;
-                return p.regionMain === selectedRegionFilter;
-            });
-
-            filteredProperties.forEach(p => {
+            properties.forEach(p => {
                 const tr = document.createElement('tr');
                 const statusLabels = { ready: 'معروض', sold: 'مباع', reserved: 'محجوز', expired: 'منتهي' };
                 tr.innerHTML = `
@@ -654,11 +490,6 @@
             allLandsLayers.length = 0;
 
             properties.forEach(p => {
-                // تصفية جغرافية للخريطة أيضاً لتتوافق مع الفلتر المختار
-                if (selectedRegionFilter !== 'الكل' && p.regionMain !== selectedRegionFilter) {
-                    return; // تخطي رسم الأراضي التي لا تنتمي للمنطقة المفلترة
-                }
-
                 const generatedKmlUrl = `kmls/${p.plotNum}_${p.area}.kml`;
 
                 const customLayer = omnivore.kml(generatedKmlUrl)
@@ -680,13 +511,16 @@
             const isSold = p.status === 'sold';
             
             if (layer instanceof L.Polygon || layer instanceof L.Polyline) {
+                // إجبار المضلع على تعبئة كاملة (Fill) باللون المحدد
                 layer.setStyle({
                     color: isSold ? '#aa1e1e' : '#d4af37',
                     weight: 3,
                     fillColor: isSold ? '#aa1e1e' : '#111111',
-                    fillOpacity: 0.45, 
+                    fillOpacity: 0.45, // تفعيل وزيادة قوة التعبئة للمضلع
                     fill: true 
                 });
+
+                // تلبية التعديل رقم 2: تم حذف سطر bindTooltip بالكامل لتطهير الخريطة من النصوص والاكتفاء بالدبوس
 
                 layer.propertyId = p.id;
                 layer.customData = p;
@@ -742,14 +576,18 @@
             const autoCrokyUrl = `kmls/img/${p.plotNum}.jpg`;
 
             sideBody.innerHTML = `
-                <div class="info-item"><b>المنطقة والمربع:</b> ${p.regionMain} - ${p.regionSub} | مربع (${p.square})</div>
+                
+                 <div class="info-item"><b>المنطقة والمربع:</b> ${p.regionMain} - ${p.regionSub} | مربع (${p.square})</div>
                 <div class="info-item"><b>المساحة الكلية:</b> ${p.area} م²</div>
-                <div class="info-item"><b>الاستعمال:</b> ${p.regionType === 'sakani' ? 'سكني' : p.regionType === 'sakanitgary' ? 'سكني | تجاري' : p.regionType === 'tgary' ? 'تجاري' : 'زراعي'}</div>
-                <div class="info-item"><b></b><br><img src="${autoCrokyUrl}" class="croky-preview" onerror="this.style.display='none'"></div>
-                <div class="info-item"><b>الارتدادات التخطيطية:</b> ${p.offsets || 'غير محدد'}</div>
-                <div class="info-item"><b>عدد الطوابق المسموحة:</b> ${p.floors || 'غير محدد'}</div>
+               
+               
+                 <div class="info-item"><b></b><br><img src="${autoCrokyUrl}" class="croky-preview" onerror="this.style.display='none'"></div>
+                  <div class="info-item"><b>الارتدادات التخطيطية:</b> ${p.offsets || 'غير محدد'}</div>
+                   <div class="info-item"><b>عدد الطوابق المسموحة:</b> ${p.floors || 'غير محدد'}</div>
                 ${measurementsHtml}
                 
+               
+
                 <div class="nested-accordion">
                     <div class="nested-header" onclick="toggleNestedSection(this)">
                         <span>عرض المزيد</span>
@@ -767,11 +605,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="btnsc">
-                    <button class="btn1" onclick="startEditProperty('${p.id}')">✎</button>
-                    <button class="btn1" onclick="window.open('${googleMapsUrl}', '_blank')">⚑</button>
-                    <button class="btn1" onclick="deleteProperty('${p.id}')">🗑</button>
+                <div class="btnsc" >
+                 <button class="btn1"  onclick="startEditProperty('${p.id}')">✎</button>
+                    <button class="btn1"  onclick="window.open('${googleMapsUrl}', '_blank')">⚑</button>
+                <button class="btn1"  onclick="deleteProperty('${p.id}')">🗑</button>
                 </div>
+               
             `;
 
             toggleSidebar(true);
@@ -804,7 +643,7 @@
             document.getElementById('plot-num').value = p.plotNum;
             document.getElementById('plot-square').value = p.square;
             document.getElementById('region-main').value = p.regionMain;
-            document.getElementById('region-type').value = p.regionType || 'sakani';
+             document.getElementById('region-type').value = p.regionType;
             document.getElementById('region-sub').value = p.regionSub;
             document.getElementById('prop-area').value = p.area;
             document.getElementById('prop-price').value = p.price === 'غير محدد' ? '' : p.price;
