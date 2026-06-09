@@ -126,13 +126,13 @@
         <div id="advanced-settings-content" style="display: none; padding: 15px; background: #fafafa; border-bottom: 2px solid var(--secondary);">
             <h4 style="font-size: 11px; margin-bottom: 8px; font-weight: bold;">إدارة قاعدة البيانات (Excel):</h4>
             <div style="display:flex; gap:8px;">
-                <button type="button" class="btn" style="flex:1; margin-top:0;" onclick="exportToExcel()">تصدير إكسل 📤</button>
-                <label class="btn" style="flex:1; margin-top:0; background:var(--primary); color:var(--secondary);">
-                    استيراد إكسل 📥
+                <button type="button" class="btn1" style="flex:1; margin-top:0;" onclick="exportToExcel()">تصدير</button>
+                <label class="btn1" style="flex:1; margin-top:0; background:var(--primary); color:var(--secondary);">
+                    استراد
                     <input type="file" id="excel-import-file" accept=".xlsx, .xls" style="display:none;" onchange="importFromExcel(this)">
                 </label>
             </div>
-            <button type="button" class="btn" style="background:#aa1e1e; color:#fff; border-color:#aa1e1e; width:100%; margin-top:8px;" onclick="clearAllDataSystem()">تفريغ النظام وإعادة جلب البيانات 🗑️</button>
+            <button type="button" class="btn1" style="background:#aa1e1e; color:#fff; border-color:#aa1e1e; width:100%; margin-top:8px;" onclick="clearAllDataSystem()">إعادة تعيين البيانات</button>
         </div>
         
         <div class="collapsible-header" onclick="toggleSection('add-land-content')">
