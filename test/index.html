@@ -332,7 +332,7 @@ function openInGoogleEarth(layer) {
     const lat = center.lat;
     const lng = center.lng;
 
-    const googleEarthUrl = `https://earth.google.com/web/search/${lat},${lng}/@${lat},${lng},1800d,150t,0r`;
+    const googleEarthUrl = `https://earth.google.com/web/search/${lat},${lng}`;
 
     window.open(googleEarthUrl, 'googleEarthWindow');
 }
