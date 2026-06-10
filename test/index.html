@@ -324,7 +324,7 @@
         scanKmlFolderAndLoad();
 function openInGoogleEarth(layer) {
     if (!layer || !layer.getBounds) {
-        alert("لم يتم العثور على الاحداثيات");
+        alert("خطأ في الاحداثيات");
         return;
     }
 
@@ -332,11 +332,7 @@ function openInGoogleEarth(layer) {
     const lat = center.lat;
     const lng = center.lng;
 
-    const altitude = 700; 
-    const tilt = 60;      
-    const heading = 0;    
-
-    const googleEarthUrl = `https://earth.google.com/web/@${lat},${lng},0a,${altitude}d,${tilt}t,${heading}r`;
+    const googleEarthUrl = `https://earth.google.com/web/search/${lat},${lng}/@${lat},${lng},1800d,150t,0r`;
 
     window.open(googleEarthUrl, 'googleEarthWindow');
 }
@@ -788,7 +784,7 @@ function openInGoogleEarth(layer) {
                 <div class="btnsc">
                     <button class="btn1" onclick="startEditProperty('${p.id}')">✎</button>
                     <button class="btn1" onclick="window.open('${googleMapsUrl}', '_blank')">⚑</button>
-                        <button class="btn1" onclick="openInGoogleEarth(currentActiveLayer)">🌐</button>
+                        <button class="btn1" onclick="openInGoogleEarth(currentActiveLayer)">3D</button>
                     <button class="btn1" onclick="deleteProperty('${p.id}')">🗑</button>
                 </div>
             `;
