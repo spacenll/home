@@ -322,7 +322,25 @@
         });
 
         scanKmlFolderAndLoad();
+function openInGoogleEarth(layer) {
+    if (!layer || !layer.getBounds) {
+        alert("لم يتم العثور على الاحداثيات");
+        return;
+    }
 
+    const center = layer.getBounds().getCenter();
+    const lat = center.lat;
+    const lng = center.lng;
+
+    const altitude = 700; 
+    const tilt = 60;      
+    const heading = 0;    
+
+    const googleEarthUrl = `https://earth.google.com/web/@${lat},${lng},0a,${altitude}d,${tilt}t,${heading}r`;
+
+    window.open(googleEarthUrl, 'googleEarthWindow');
+}
+        
         function toggleAdminPanel() {
             const panel = document.getElementById('admin-panel');
             const btn = document.getElementById('toggle-panel-btn');
@@ -770,10 +788,11 @@
                 <div class="btnsc">
                     <button class="btn1" onclick="startEditProperty('${p.id}')">✎</button>
                     <button class="btn1" onclick="window.open('${googleMapsUrl}', '_blank')">⚑</button>
+                        <button class="btn1" onclick="openInGoogleEarth(currentActiveLayer)">🌐</button>
                     <button class="btn1" onclick="deleteProperty('${p.id}')">🗑</button>
                 </div>
             `;
-
+window.currentActiveLayer = layer;
             toggleSidebar(true);
         }
 
